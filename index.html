@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>THE MARGIN — Digital Index & Modern Critique</title>
+    <meta name="description" content="An independent, uncensored digital space for modern critique across culture, fashion, film, society, and the internet.">
+    <meta name="keywords" content="The Margin, critique, cultural essay, fashion controversy, independent zine">
+    
+    <!-- Google Search Console Site Verification Engine Hook -->
+    <meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_TOKEN_HERE">
+
+    <!-- Tailwind CSS Rendering Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Architectural Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                        cursive: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        canvas: '#FBFBFA',   
+                        ink: '#1C1C1C',      
+                        accent: '#2B3326',   
+                    },
+                    transitionTimingFunction: {
+                        'liquid': 'cubic-bezier(0.16, 1, 0.3, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-transition {
+            transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reading-lane {
+            max-width: 640px;
+        }
+        body {
+            background-color: #FBFBFA;
+            color: #1C1C1C;
+        }
+        .balance-text p {
+            margin-bottom: 1.75rem;
+            break-inside: avoid;
+        }
+        .editorial-drop-cap::first-letter {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            float: left;
+            margin-right: 0.65rem;
+            line-height: 0.8;
+            color: #1C1C1C; 
+            font-weight: 400;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #1C1C1C;
+            transition: width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-ink selection:text-canvas">
+
+    <!-- ARTIFACT CONTENT DATABASE REGISTRATION LINK -->
+    <script src="articles.js"></script>
+
+    <!-- MAIN PLATFORM WRAPPER -->
+    <div class="min-h-screen flex flex-col px-6 md:px-12 lg:px-20 py-8">
+        
+        <!-- HEADER APEX BLOCK -->
+        <header class="relative w-full flex flex-col items-center justify-center border-b border-ink/10 pb-10 mb-10">
+            <nav class="absolute top-0 right-0 flex gap-6 text-[10px] uppercase tracking-[0.2em] text-ink/70">
+                <button onclick="switchView('home')" class="nav-link text-ink transition-colors duration-300">Home</button>
+                <button onclick="switchView('about')" class="nav-link text-ink transition-colors duration-300">About</button>
+                <button onclick="switchView('contact')" class="nav-link text-ink transition-colors duration-300">Contact</button>
+            </nav>
+
+            <h1 onclick="switchView('home')" class="font-sans font-black uppercase text-4xl md:text-6xl tracking-[0.05em] text-center cursor-pointer select-none mb-3 pt-8 pl-[0.15em]">
+                THE MARGIN
+            </h1>
+            <p class="font-sans text-[10px] uppercase tracking-[0.3em] text-ink/50 text-center font-normal">
+                Ideas that live outside the main
+            </p>
+        </header>
+
+        <!-- HORIZONTAL FILTER BAR TRACK -->
+        <div id="filter-bar" class="w-full flex justify-center overflow-x-auto pb-6 mb-16 border-b border-ink/5">
+            <div class="flex gap-6 md:gap-8 text-[11px] uppercase tracking-[0.2em] font-normal whitespace-nowrap px-4">
+                <button onclick="filterCategory('All')" class="cat-btn text-ink border-b border-ink pb-1 fade-transition">All</button>
+                <button onclick="filterCategory('Mainstream')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Mainstream</button>
+                <button onclick="filterCategory('Archive')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Archive</button>
+                <button onclick="filterCategory('Culture')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Culture</button>
+                <button onclick="filterCategory('Fashion & Controversy')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Fashion & Controversy</button>
+                <button onclick="filterCategory('Global')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Global</button>
+            </div>
+        </div>
+
+        <!-- MAIN MOUNT CANVAS INTERFACE -->
+        <main id="view-container" class="flex-grow w-full max-w-7xl mx-auto opacity-100 fade-transition">
+            <!-- Content Injected Dynamically By Application Engine -->
+        </main>
+
+        <!-- COLOPHON FOOTER ARCE HUB -->
+        <footer class="w-full mt-40 pt-16 border-t border-ink/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 text-left text-xs mb-16">
+                <div>
+                    <h5 class="font-sans uppercase tracking-[0.25em] text-ink/40 text-[10px] mb-4">The Publication</h5>
+                    <p class="text-ink/60 font-normal leading-relaxed text-[12px] max-w-md">
+                        The Margin operates as an independent digital index outside traditional publishing constraints, offering a dedicated architectural frame for modern critique.
+                    </p>
+                </div>
+                <div class="md:text-right">
+                    <h5 class="font-sans uppercase tracking-[0.25em] text-ink/40 text-[10px] mb-4">Navigation Map</h5>
+                    <div class="flex flex-col md:items-end gap-2.5 text-[11px] text-ink/70">
+                        <button onclick="switchView('home')" class="text-left md:text-right hover:text-ink transition-colors">Index Array</button>
+                        <button onclick="switchView('about')" class="text-left md:text-right hover:text-ink transition-colors">Founders' Manifesto</button>
+                        <button onclick="switchView('contact')" class="text-left md:text-right hover:text-ink transition-colors">Brand Transmissions</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full text-center text-[9px] uppercase tracking-[0.25em] text-ink/30 pt-6 border-t border-ink/5 font-normal">
+                &copy; 2026 THE MARGIN. ALL RIGHTS RESERVED.
+            </div>
+        </footer>
+    </div>
+
+    <!-- MAIN PLATFORM SCRIPT LOGIC ENGINE -->
+    <script>
+        let currentCategory = 'All';
+        let currentView = 'home';
+        let activeArticleId = null;
+        let isSubscribed = false; 
+        let visibleArchiveCount = 4; 
+
+        // State storage for localized like interactions
+        const articleLikesState = {};
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderView();
+        });
+
+        function switchView(viewName, articleId = null) {
+            const container = document.getElementById('view-container');
+            container.style.opacity = '0';
+            
+            setTimeout(() => {
+                currentView = viewName;
+                activeArticleId = articleId;
+                renderView();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                container.style.opacity = '1';
+            }, 250);
+        }
+
+        function filterCategory(category) {
+            currentCategory = category;
+            visibleArchiveCount = 4; 
+            
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if(btn.innerText.toLowerCase() === category.toLowerCase()) {
+                    btn.classList.remove('text-ink/40', 'hover:text-ink');
+                    btn.classList.add('text-ink', 'border-b', 'border-ink');
+                } else {
+                    btn.classList.remove('text-ink', 'border-b', 'border-ink');
+                    btn.classList.add('text-ink/40', 'hover:text-ink');
+                }
+            });
+
+            if (currentView !== 'home') {
+                currentView = 'home';
+                switchView('home');
+            } else {
+                renderHome();
+            }
+        }
+
+        function renderView() {
+            const filterBar = document.getElementById('filter-bar');
+            if (currentView === 'home') {
+                filterBar.classList.remove('hidden');
+                renderHome();
+            } else {
+                filterBar.classList.add('hidden');
+                if (currentView === 'about') renderAbout();
+                if (currentView === 'contact') renderContact();
+                if (currentView === 'article') renderArticle();
+            }
+        }
+
+        function loadMoreArticles() {
+            visibleArchiveCount += 4;
+            renderHome();
+        }
+
+        // VIEW A: DYNAMIC INDEX HOME STREAM
+        function renderHome() {
+            const container = document.getElementById('view-container');
+            
+            const filteredData = currentCategory === 'All' 
+                ? MARGIN_DATABASE 
+                : MARGIN_DATABASE.filter(item => item.category.toLowerCase() === currentCategory.toLowerCase());
+
+            if(filteredData.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-24 text-xs uppercase tracking-widest text-ink/40">
+                        No entries currently filed under this category mark.
+                    </div>`;
+                return;
+            }
+
+            const latestArticle = filteredData[0];
+            const remainingArticles = filteredData.slice(1);
+
+            let htmlPayload = '';
+
+            // Featured Hero Card
+            htmlPayload += `
+                <section class="w-full mb-24 cursor-pointer group" onclick="switchView('article', '${latestArticle.id}')">
+                    <div class="inline-block bg-ink text-canvas text-[9px] uppercase tracking-[0.25em] px-3 py-1.5 font-normal mb-4">
+                        ${latestArticle.category} &bull; ${latestArticle.date}
+                    </div>
+                    <div class="w-full h-[68vh] overflow-hidden mb-8 relative border border-ink/10 ring-4 ring-ink/[0.01] shadow-[1px_1px_4px_rgba(0,0,0,0.01)] bg-ink/5">
+                        <img src="${latestArticle.cover_image}" alt="Cover" class="w-full h-full object-cover opacity-100 group-hover:scale-[1.005] transition-transform duration-700 ease-out">
+                    </div>
+                    <div class="max-w-4xl">
+                        <h2 class="font-serif text-3xl md:text-4xl tracking-tight leading-tight mb-3 text-ink group-hover:text-ink/60 transition-colors duration-300">
+                            ${latestArticle.title}
+                        </h2>
+                        <p class="text-[10px] font-sans tracking-[0.15em] text-ink/40 uppercase mb-4">${latestArticle.subtitle}</p>
+                        <p class="text-sm text-ink/70 leading-relaxed max-w-3xl font-normal mb-5">
+                            ${latestArticle.preview_snippet}
+                        </p>
+                        <span class="inline-block text-[11px] uppercase tracking-[0.25em] border-b border-ink pb-0.5 group-hover:border-ink/30 group-hover:text-ink/50 fade-transition">Read Essay &rarr;</span>
+                    </div>
+                </section>
+            `;
+
+            // Atmospheric Notebook Accent Band
+            if (currentCategory === 'All') {
+                htmlPayload += `
+                    <section class="w-full bg-ink text-canvas py-16 my-24 px-8 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 items-center border border-ink">
+                        <div class="md:col-span-1">
+                            <h3 class="font-sans text-[10px] uppercase tracking-[0.35em] text-canvas/50 mb-1">From the notebook</h3>
+                            <div class="w-12 h-[1px] bg-canvas/20"></div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="font-cursive italic text-xl md:text-2xl text-canvas/90 leading-relaxed font-light">
+                                "We spend hours analyzing why a single collection caused an uproar, or why everyone missed the point of that one indie film scene. These are the scattered, unedited paragraphs written before they turn into real essays."
+                            </p>
+                            <p class="text-[9px] uppercase tracking-[0.25em] text-canvas/40 mt-5 font-sans">— R. & P.</p>
+                        </div>
+                    </section>
+                `;
+            }
+
+            htmlPayload += `<h3 class="text-[10px] uppercase tracking-[0.35em] text-ink/30 mb-12 pb-3 border-b border-ink/10">All Articles</h3>`;
+
+            // Grid Partition Array
+            if(remainingArticles.length > 0) {
+                htmlPayload += `<div class="w-full">`;
+                htmlPayload += `<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">`;
+                
+                const articlesToShow = remainingArticles.slice(0, visibleArchiveCount);
+                
+                articlesToShow.forEach((article) => {
+                    htmlPayload += `
+                        <article class="flex flex-col cursor-pointer group justify-between h-full" onclick="switchView('article', '${article.id}')">
+                            <div class="space-y-4">
+                                <div class="self-start inline-block bg-ink text-canvas text-[8px] uppercase tracking-[0.25em] px-2.5 py-1 font-normal">
+                                    ${article.category}
+                                </div>
+                                <div class="w-full aspect-[4/3] overflow-hidden border border-ink/5 ring-4 ring-ink/[0.015] bg-ink/5 relative">
+                                    <img src="${article.cover_image}" alt="Archive Media" class="w-full h-full object-cover opacity-100 group-hover:scale-[1.01] transition-transform duration-700 ease-out">
+                                </div>
+                                <h4 class="font-serif text-xl tracking-tight text-ink group-hover:text-ink/60 transition-colors duration-300">
+                                    ${article.title}
+                                </h4>
+                                <p class="text-xs text-ink/60 font-normal leading-relaxed line-clamp-3">${article.preview_snippet}</p>
+                            </div>
+                            <div class="pt-4">
+                                <span class="inline-block text-[10px] uppercase tracking-[0.25em] self-start border-b border-ink pb-0.5 group-hover:border-ink/20 group-hover:text-ink/40 fade-transition">Read Essay &rarr;</span>
+                            </div>
+                        </article>
+                    `;
+                });
+                htmlPayload += `</section>`;
+                htmlPayload += `</div>`; 
+
+                if (remainingArticles.length > visibleArchiveCount) {
+                    htmlPayload += `
+                        <div class="w-full flex justify-center mt-20">
+                            <button onclick="loadMoreArticles()" class="text-[10px] uppercase tracking-[0.3em] font-normal text-canvas bg-ink hover:bg-transparent hover:text-ink px-8 py-3.5 border border-ink fade-transition">
+                                Load More Contents
+                            </button>
+                        </div>
+                    `;
+                }
+
+            } else if (remainingArticles.length === 0 && currentCategory === 'All') {
+                htmlPayload += `
+                    <p class="text-xs uppercase tracking-widest text-ink/30 text-center py-12">
+                        The archive array is processing remaining contents.
+                    </p>`;
+            }
+
+            // Global Newsletter Channel
+            htmlPayload += `
+                <div class="w-full max-w-2xl mx-auto mt-40 pt-20 border-t border-ink/10 text-center">
+                    <h4 class="font-serif text-2xl uppercase tracking-tight text-ink mb-2">Straight to your Space</h4>
+                    <p class="text-xs text-ink/50 font-normal mb-8">No clutter. No algorithms. Just our latest critiques sent directly to your screen.</p>
+                    <form onsubmit="alert('Welcome to our circle.'); event.preventDefault();" class="flex gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="ENTER YOUR EMAIL" required class="flex-grow bg-transparent border-b border-ink/20 focus:border-ink px-2 py-2 text-[11px] tracking-widest outline-none transition-colors duration-300">
+                        <button type="submit" class="text-[10px] uppercase tracking-[0.25em] border-b border-ink hover:text-ink/50 pb-1 fade-transition">Subscribe</button>
+                    </form>
+                </div>
+            `;
+
+            container.innerHTML = htmlPayload;
+        }
+
+        // VIEW B: MANIFESTO HUBS ("ABOUT" SECTION)
+        function renderAbout() {
+            document.getElementById('view-container').innerHTML = `
+                <section class="w-full flex flex-col pt-4 max-w-5xl mx-auto opacity-100 fade-transition">
+                    <div class="mb-12">
+                        <button onclick="switchView('home')" class="text-[10px] uppercase tracking-[0.25em] text-ink/40 hover:text-ink transition-colors duration-300">
+                            &larr; Return to Index
+                        </button>
+                    </div>
+
+                    <div class="max-w-4xl mb-16">
+                        <h2 class="font-serif text-3xl md:text-4xl leading-tight text-ink tracking-tight mb-5">
+                            The Margin was not planned.<br>It was <span class="italic font-serif capitalize text-ink/70">inevitable.</span>
+                        </h2>
+                        <p class="font-sans text-xs text-ink/50 tracking-wider uppercase">
+                            We are Rutvi and Preksha, and honestly, we just wanted something to read.
+                        </p>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-ink/10 mb-16"></div>
+
+                    <div class="md:columns-2 gap-x-16 text-sm text-ink/70 font-normal leading-relaxed tracking-wide font-sans balance-text">
+                        <p class="editorial-drop-cap">
+                            We were the kind of people who could not watch a film, scroll through a headline, or sit in a coffee shop without having something to say about it. About the culture, the fashion, the things everyone was talking about and somehow also completely missing the point of. Strong opinions, the kind you want to write down somewhere real. The kind that do not fit neatly into a tweet or a comment section or a conversation that ends too quickly.
+                        </p>
+                        <p>
+                            We kept looking for a publication that felt like us. Sharp but not aggressive. Opinionated but not performative. Interested in the world without pretending to be neutral about it. Something that treated its readers like intelligent people who had taste and knew how to use it.
+                        </p>
+                        <p class="pt-2 md:pt-0 text-ink">
+                            We could not find it. So we built it.
+                        </p>
+                        <p>
+                            The Margin is our uncensored, independent space for modern critique. Culture, fashion, film, society, the internet. Everything we cannot stop thinking about, written the way it actually deserves to be written. No brief to answer to. No algorithm to please. Just us, our contributors, and a genuine love for ideas that have something real to say.
+                        </p>
+                        <p class="border-l border-ink/40 pl-5 py-1 my-6 italic text-ink/90 bg-ink/[0.01]">
+                            If you have ever put down a magazine and thought, "that is not quite it," this is for you.
+                        </p>
+                        <p class="text-ink/40 pt-4 uppercase text-[10px] tracking-widest font-normal">
+                            Welcome to The Margin. We are glad you found us.
+                        </p>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW C: COLLABORATION PORTALS
+        function renderContact() {
+            document.getElementById('view-container').innerHTML = `
+                <section class="w-full flex flex-col pt-4 max-w-4xl mx-auto opacity-100 fade-transition">
+                    <div class="mb-12">
+                        <button onclick="switchView('home')" class="text-[10px] uppercase tracking-[0.25em] text-ink/40 hover:text-ink transition-colors duration-300">
+                            &larr; Return to Index
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 pt-4">
+                        <div>
+                            <h2 class="font-serif text-2xl md:text-3xl leading-tight text-ink tracking-tight mb-5">
+                                Align with<br>The Margin.
+                            </h2>
+                            <p class="font-sans text-xs text-ink/60 leading-relaxed font-normal mb-8">
+                                We partner with independent designers, intentional brands, and cultural institutions who reject the mass-produced and value the profound. For brand collaborations, lookbook features, or digital partnerships, reach out to our desk.
+                            </p>
+                            <h3 class="font-sans text-[10px] uppercase tracking-widest text-ink/40 mb-2">Submissions</h3>
+                            <p class="font-sans text-xs text-ink/50 leading-relaxed font-normal">
+                                Have strong opinions written the way they actually deserve to be written? We accept cultural critique essays, design analyses, and raw visual storytelling series. 
+                            </p>
+                        </div>
+
+                        <div class="border-t md:border-t-0 md:border-l border-ink/10 pt-12 md:pt-0 md:pl-12">
+                            <form onsubmit="alert('Thank you. Your submission has entered our space.'); event.preventDefault(); switchView('home');" class="flex flex-col gap-6">
+                                <div>
+                                    <label class="text-[9px] uppercase tracking-widest text-ink/40 block mb-1">Identity / Brand</label>
+                                    <input type="text" required class="w-full bg-transparent border-b border-ink/20 py-2 text-xs outline-none focus:border-ink transition-colors duration-300">
+                                </div>
+                                <div>
+                                    <label class="text-[9px] uppercase tracking-widest text-ink/40 block mb-1">Email Coordinates</label>
+                                    <input type="email" required class="w-full bg-transparent border-b border-ink/20 py-2 text-xs outline-none focus:border-ink transition-colors duration-300">
+                                </div>
+                                <div>
+                                    <label class="text-[9px] uppercase tracking-widest text-ink/40 block mb-1">The Proposition</label>
+                                    <textarea rows="4" required class="w-full bg-transparent border-b border-ink/20 py-2 text-xs outline-none resize-none focus:border-ink transition-colors duration-300"></textarea>
+                                </div>
+                                <button type="submit" class="bg-ink text-canvas hover:bg-transparent hover:text-ink text-[10px] uppercase tracking-[0.3em] py-3.5 mt-4 border border-ink fade-transition">
+                                    Send Transmission
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW D: IMMERSIVE READING CHAMBER
+        function renderArticle() {
+            const article = MARGIN_DATABASE.find(item => item.id === activeArticleId);
+            if(!article) return;
+
+            // Initialize like metrics if empty for this runtime instance
+            if (!articleLikesState[article.id]) {
+                articleLikesState[article.id] = {
+                    count: Math.floor(Math.random() * 40) + 12, // Natural placeholder starting base
+                    liked: false
+                };
+            }
+
+            const currentLikeData = articleLikesState[article.id];
+            let contentOutput = '';
+
+            if (article.is_gated && !isSubscribed) {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = article.content;
+                const paragraphs = tempDiv.getElementsByTagName('p');
+                
+                let visibleText = '';
+                for(let i = 0; i < Math.min(2, paragraphs.length); i++) {
+                    visibleText += paragraphs[i].outerHTML;
+                }
+
+                contentOutput = `
+                    <div class="relative">
+                        <div class="text-ink/80 text-sm space-y-6">
+                            ${visibleText}
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-canvas via-canvas/90 to-transparent pointer-events-none"></div>
+                        
+                        <div class="w-full mt-10 p-8 md:p-12 border border-ink/20 bg-canvas relative flex flex-col items-center text-center">
+                            <h5 class="font-sans uppercase tracking-[0.3em] text-[10px] mb-3 text-ink/40">The Editorial Circle</h5>
+                            <p class="text-xs tracking-[0.15em] text-ink/60 mb-6 max-w-sm leading-relaxed">
+                                The most vital concepts live just past the margin. Subscribe to unlock our entire uncensored index.
+                            </p>
+                            <form onsubmit="unlockArchive(event)" class="w-full max-w-md flex flex-col gap-4">
+                                <input type="text" placeholder="NAME" required class="w-full bg-transparent border-b border-ink/20 px-2 py-2 text-[10px] uppercase tracking-widest outline-none focus:border-ink transition-colors duration-300">
+                                <input type="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-ink/20 px-2 py-2 text-[10px] uppercase tracking-widest outline-none focus:border-ink transition-colors duration-300">
+                                <button type="submit" class="w-full bg-ink text-canvas hover:bg-transparent hover:text-ink text-[10px] uppercase tracking-[0.3em] py-3.5 mt-4 border border-ink fade-transition">
+                                    Access Feature
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                `;
+            } else {
+                contentOutput = `
+                    <div class="text-ink/80 text-sm leading-relaxed tracking-wide space-y-6">
+                        ${article.content}
+                    </div>
+
+                    <!-- REFINEMENT: MINIMALIST LIKE & SHARE SYSTEM CORE -->
+                    <div class="mt-20 pt-8 border-t border-ink/10 flex items-center justify-between gap-6">
+                        <button onclick="handleLikeInteraction('${article.id}')" 
+                                id="like-btn" 
+                                class="flex items-center gap-2.5 text-[10px] uppercase tracking-[0.2em] px-4 py-2 border transition-all duration-300 group ${currentLikeData.liked ? 'bg-ink text-canvas border-ink' : 'border-ink/10 text-ink/60 hover:text-ink hover:border-ink/30'}">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="${currentLikeData.liked ? 'currentColor' : 'none'}" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5 transition-transform group-hover:scale-110">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                            <span>Appreciate (<span id="like-count-value">${currentLikeData.count}</span>)</span>
+                        </button>
+
+                        <button onclick="handleShareInteraction('${article.title}')" 
+                                id="share-btn" 
+                                class="flex items-center gap-2.5 text-[10px] uppercase tracking-[0.2em] px-4 py-2 border border-ink/10 text-ink/60 hover:text-ink hover:border-ink/30 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                            </svg>
+                            <span id="share-btn-text">Share Index</span>
+                        </button>
+                    </div>
+                `;
+            }
+
+            document.getElementById('view-container').innerHTML = `
+                <article class="w-full flex flex-col items-center pt-4 opacity-100 fade-transition">
+                    <div class="text-center mb-16">
+                        <button onclick="switchView('home')" class="text-[10px] uppercase tracking-[0.25em] text-ink/40 hover:text-ink mb-6 inline-block fade-transition">&larr; Back to Index</button>
+                        <div class="inline-block bg-ink text-canvas text-[8px] uppercase tracking-[0.25em] px-2.5 py-1 font-normal mb-4 mx-auto">${article.category}</div>
+                        <h2 class="font-serif text-2xl md:text-4xl tracking-tight leading-tight text-ink mb-4 max-w-3xl mx-auto">${article.title}</h2>
+                        <p class="text-[11px] tracking-[0.15em] text-ink/40 mb-6 uppercase max-w-xl mx-auto">${article.subtitle}</p>
+                        <div class="text-[9px] uppercase tracking-[0.2em] text-ink/40">
+                            By ${article.author} &bull; ${article.date} &bull; ${article.read_time} Read
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[55vh] md:h-[68vh] overflow-hidden bg-ink/5 border border-ink/10 mb-20">
+                        <img src="${article.cover_image}" alt="Media Frame" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="reading-lane w-full mx-auto pb-16">
+                        ${contentOutput}
+                    </div>
+                </article>
+            `;
+        }
+
+        // Like Interaction Engine
+        function handleLikeInteraction(id) {
+            const state = articleLikesState[id];
+            const btn = document.getElementById('like-btn');
+            const countLabel = document.getElementById('like-count-value');
+
+            if (state.liked) {
+                state.count--;
+                state.liked = false;
+                btn.classList.remove('bg-ink', 'text-canvas', 'border-ink');
+                btn.classList.add('border-ink/10', 'text-ink/60');
+            } else {
+                state.count++;
+                state.liked = true;
+                btn.classList.remove('border-ink/10', 'text-ink/60');
+                btn.classList.add('bg-ink', 'text-canvas', 'border-ink');
+            }
+            countLabel.innerText = state.count;
+        }
+
+        // Share Interaction Engine (Native APIs with seamless Clipboard fallback)
+        function handleShareInteraction(title) {
+            const shareData = {
+                title: title,
+                text: `Reading "${title}" on THE MARGIN.`,
+                url: window.location.href
+            };
+
+            const shareBtnText = document.getElementById('share-btn-text');
+
+            if (navigator.share) {
+                navigator.share(shareData).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(window.location.href)
+                    .then(() => {
+                        shareBtnText.innerText = "Link Copied";
+                        setTimeout(() => {
+                            shareBtnText.innerText = "Share Index";
+                        }, 2000);
+                    })
+                    .catch(() => {
+                        alert("Could not extract platform link automatically.");
+                    });
+            }
+        }
+
+        function unlockArchive(e) {
+            e.preventDefault();
+            isSubscribed = true;
+            renderArticle();
+        }
+    </script>
+</body>
+</html>
