@@ -179,6 +179,29 @@ const MARGIN_DATABASE = [
         `
     },
     {
+        "id": "dear-new-york-letter-to-a-mythologised-city",
+        "title": "Dear New York, even if life took me anywhere else, I would still come looking for you.",
+        "subtitle": "A letter to a city you have never been to but somehow know.",
+        "category": "Culture",
+        "date": "May 19, 2026",
+        "author": "The Margin",
+        "read_time": "3 min",
+        "cover_image": "https://i.pinimg.com/736x/bb/5a/9e/bb5a9e4074f1e205bdfd38375c1c64b2.jpg",
+        "preview_snippet": "Cities hold emotional weight before we ever visit them. New York is perhaps the most mythologised city on earth. This editorial is not a travel guide. It is a study in how place becomes feeling.",
+        "is_gated": false,
+        "content": `
+            <p class="italic text-ink/70 mb-6"><strong>Why this piece exists:</strong> Cities hold emotional weight before we ever visit them. New York is perhaps the most mythologised city on earth. This editorial is not a travel guide. It is a study in how place becomes feeling, and why some cities live in us as ideas before they live in us as memory.</p>
+            
+            <p>From afar, I watch its streets pulse with life. There is a rhythm to New York City that is impossible to ignore. It does not just move. It hums, sings, and never stops.</p>
+            <p>From the first sip of morning coffee on a bustling street corner to the neon glow of Times Square at midnight, the city pulses with a life that feels both chaotic and intimate. Every borough tells its own story.</p>
+            
+            <h3>A Geography of Imagination</h3>
+            <p>Manhattan hums with ambition. Brooklyn with creativity. Queens with multicultural vibrancy. The Bronx with resilience. Staten Island with quiet surprises.</p>
+            <p>Even in the chaos, there is calm. Central Park is a breath of fresh air I can almost feel through pictures and stories. It is alive, chaotic, imperfect, and endlessly fascinating.</p>
+            <p>Watching New York from afar feels like glimpsing a world where anything could happen. For the skyline, the stories, the energy, and the endless possibilities. New York, you have my heart.</p>
+        `
+    },
+    {
         "id": "linkedin-became-one-of-the-most-unhinged-places",
         "title": "Linkedin Became One of the Most Unhinged Places on the Internet. And Everyone Is Just Going Along With It.",
         "subtitle": "On hustle porn, crying CEOs, and the professional network that accidentally became a performance art platform.",
@@ -247,29 +270,6 @@ const MARGIN_DATABASE = [
             <div class="border-t border-b border-ink/20 py-4 my-6 text-center text-sm tracking-wide uppercase">
                 Tell us in the comments, where do you draw the line between fashion as art and fashion as something you can actually wear?
             </div>
-        `
-    },
-    {
-        "id": "dear-new-york-letter-to-a-mythologised-city",
-        "title": "Dear New York, even if life took me anywhere else, I would still come looking for you.",
-        "subtitle": "A letter to a city you have never been to but somehow know.",
-        "category": "Culture",
-        "date": "May 19, 2026",
-        "author": "The Margin",
-        "read_time": "3 min",
-        "cover_image": "https://i.pinimg.com/736x/bb/5a/9e/bb5a9e4074f1e205bdfd38375c1c64b2.jpg",
-        "preview_snippet": "Cities hold emotional weight before we ever visit them. New York is perhaps the most mythologised city on earth. This editorial is not a travel guide. It is a study in how place becomes feeling.",
-        "is_gated": false,
-        "content": `
-            <p class="italic text-ink/70 mb-6"><strong>Why this piece exists:</strong> Cities hold emotional weight before we ever visit them. New York is perhaps the most mythologised city on earth. This editorial is not a travel guide. It is a study in how place becomes feeling, and why some cities live in us as ideas before they live in us as memory.</p>
-            
-            <p>From afar, I watch its streets pulse with life. There is a rhythm to New York City that is impossible to ignore. It does not just move. It hums, sings, and never stops.</p>
-            <p>From the first sip of morning coffee on a bustling street corner to the neon glow of Times Square at midnight, the city pulses with a life that feels both chaotic and intimate. Every borough tells its own story.</p>
-            
-            <h3>A Geography of Imagination</h3>
-            <p>Manhattan hums with ambition. Brooklyn with creativity. Queens with multicultural vibrancy. The Bronx with resilience. Staten Island with quiet surprises.</p>
-            <p>Even in the chaos, there is calm. Central Park is a breath of fresh air I can almost feel through pictures and stories. It is alive, chaotic, imperfect, and endlessly fascinating.</p>
-            <p>Watching New York from afar feels like glimpsing a world where anything could happen. For the skyline, the stories, the energy, and the endless possibilities. New York, you have my heart.</p>
         `
     },
     {
