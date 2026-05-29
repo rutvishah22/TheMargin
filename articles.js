@@ -90,6 +90,47 @@ const MARGIN_DATABASE = [
         `
     },
     {
+        id: "before-pinterest-india",
+        title: "Before Pinterest, India Invented It",
+        subtitle: "On how a civilisation that built its entire visual identity around colour, pattern, and craft became an aesthetic trend that the internet forgot to credit.",
+        preview_snippet: "There is always that moment when you realise half the internet is just repackaged memory with better branding. You scroll through a mood board tagged coastal blue and earthy minimalism...",
+        category: "Fashion & Controversy",
+        author: "The Margin",
+        date: "MAY 29, 2026",
+        read_time: "5 MIN",
+        cover_image: "https://i.pinimg.com/736x/ab/1a/86/ab1a864e20d8f361588552a15e2854e7.jpg", 
+        is_gated: false,
+        content: `
+            <p class="editorial-drop-cap">There is always that moment when you realise half the internet is just repackaged memory with better branding.</p>
+            <p>You scroll through a mood board tagged coastal blue and earthy minimalism, through linen textures and hand blocked prints and intricate geometric patterns, and somewhere in the back of your mind something registers. You have seen this before. Not on Pinterest. Not in a design editorial. In the walls of a haveli. In your grandmother's dupatta. In a tradition that has been quietly practising what the internet just discovered last Tuesday.</p>
+            <p>India did not take inspiration from the global aesthetic movement. The global aesthetic movement took inspiration from India. It just forgot to mention that part.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What India Was Already Doing</h3>
+            <p>Before moodboards existed as a concept, India had an entire civilisation built around intentional visual culture.</p>
+            <p>The use of colour in Indian textiles was never decorative for its own sake. It was coded. Specific dyes carried specific meanings. The indigo trade routes shaped economies and wars. Block printing traditions in Rajasthan, Kalamkari in Andhra Pradesh, Ajrakh in Gujarat and Sindh, these were not folk crafts in the diminutive sense. They were sophisticated design systems developed and refined over centuries by communities whose entire livelihood and identity was tied to the precision of the work.</p>
+            <p>The maximalism that Pinterest now calls Grandmillennial style. The earthy tones that Kinfolk magazine positioned as a new kind of minimalism. The layered textiles and handmade objects that fill the mood boards of interior designers charging premium rates for authenticity. All of it has a longer history than the aesthetic it has been absorbed into. And that history has a geography. It is called India. And it has been here for a while.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Renaming Problem</h3>
+            <p>Here is where it gets uncomfortable. There is a pattern in how global design culture engages with non-Western aesthetics. The original context gets stripped. The cultural specificity gets softened into something universally palatable. And then it gets a new name, a cleaner name, one that does not require you to know anything about where it came from.</p>
+            <p>Ikat becomes a geometric print trend. Ajrakh becomes earthy artisanal. Mughal garden motifs become maximalist botanical. The thing itself travels. The origin does not.</p>
+            <p>This is not always malicious. Culture has always moved and mixed and borrowed. But there is a difference between influence acknowledged and influence laundered. When a Western design brand releases a collection heavily inspired by Indian craft traditions and the press release does not mention India once, that is not an accident. That is a choice about what gets credited and what gets consumed. The algorithm did not build this. Intention did. And intention can be examined.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Mood Board That Already Existed</h3>
+            <p>Every aesthetic that currently performs well on Pinterest and has a name like cottagecore or maximalist boho or artisanal earth or any variation of those words has a version that already existed in India. Not as a trend. As a living practice. As something people were making and wearing and building homes around not because a visual platform told them it was having a moment but because it was simply the way things were done.</p>
+            <p>The style boards that designers are now selling as original vision were already on the walls. In the textiles. In the architecture. In the craft traditions of communities that have been doing this work for generations without a hashtag or an aesthetic name or a brand deal. The forgotten style boards already existed. They just existed here.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What Gets Called Inspiration and What Gets Called Influence</h3>
+            <p>There is a version of this conversation that is purely about credit and attribution. That conversation matters and is worth having. But there is a deeper version that is about what happens to originality when it gets disconnected from its roots.</p>
+            <p>When Indian craft gets absorbed into a global aesthetic trend, it often gets praised most loudly in the form that is furthest from the original. The high end brand that does a collection inspired by block printing gets the editorial. The artisan in Bagru whose family has been doing block printing for generations gets, if they are lucky, a supply chain relationship. The aesthetic travels upward. The people do not always travel with it.</p>
+            <p>This is not just a design story. It is a story about how value gets assigned. About which version of a thing gets called innovative and which version gets called traditional. About who gets to be a designer and who gets to be a craftsperson. About what global means when it is applied selectively.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">Why This Matters Beyond Aesthetics</h3>
+            <p>This was never really about moodboards. It was about a much older question. What happens to a culture's relationship with its own visual identity when that identity keeps getting renamed and re-exported back to it as something new?</p>
+            <p>When a young person in India encounters their own craft tradition first through a Western design brand rather than through the community that created it, something has shifted. Not dramatically. Quietly. In the way that things shift when the story of where something came from gets told by someone other than the people it came from.</p>
+            <p>India has centuries of visual intelligence. Colour theory that predates Pantone. Pattern systems that predate graphic design as a profession. Textile traditions that influenced trade routes that shaped the modern world. None of that requires a mood board to validate it. It just requires the people consuming the aesthetic to be honest about where it came from.</p>
+        `
+    },
+    {
         "id": "same-product-completely-different-feeling",
         "title": "Same Product. Completely Different Feeling.",
         "subtitle": "How Terence Reilly turned a 110 year old brand into the Birkin bag of water bottles. And what it actually teaches us about modern marketing.",
@@ -270,47 +311,6 @@ const MARGIN_DATABASE = [
             <div class="border-t border-b border-ink/20 py-4 my-6 text-center text-sm tracking-wide uppercase">
                 Tell us in the comments, where do you draw the line between fashion as art and fashion as something you can actually wear?
             </div>
-        `
-    },
-    {
-        id: "before-pinterest-india",
-        title: "Before Pinterest, India Invented It",
-        subtitle: "On how a civilisation that built its entire visual identity around colour, pattern, and craft became an aesthetic trend that the internet forgot to credit.",
-        preview_snippet: "There is always that moment when you realise half the internet is just repackaged memory with better branding. You scroll through a mood board tagged coastal blue and earthy minimalism...",
-        category: "Fashion & Controversy",
-        author: "The Margin",
-        date: "MAY 29, 2026",
-        read_time: "5 MIN",
-        cover_image: "https://i.pinimg.com/736x/ab/1a/86/ab1a864e20d8f361588552a15e2854e7.jpg", 
-        is_gated: false,
-        content: `
-            <p class="editorial-drop-cap">There is always that moment when you realise half the internet is just repackaged memory with better branding.</p>
-            <p>You scroll through a mood board tagged coastal blue and earthy minimalism, through linen textures and hand blocked prints and intricate geometric patterns, and somewhere in the back of your mind something registers. You have seen this before. Not on Pinterest. Not in a design editorial. In the walls of a haveli. In your grandmother's dupatta. In a tradition that has been quietly practising what the internet just discovered last Tuesday.</p>
-            <p>India did not take inspiration from the global aesthetic movement. The global aesthetic movement took inspiration from India. It just forgot to mention that part.</p>
-            
-            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What India Was Already Doing</h3>
-            <p>Before moodboards existed as a concept, India had an entire civilisation built around intentional visual culture.</p>
-            <p>The use of colour in Indian textiles was never decorative for its own sake. It was coded. Specific dyes carried specific meanings. The indigo trade routes shaped economies and wars. Block printing traditions in Rajasthan, Kalamkari in Andhra Pradesh, Ajrakh in Gujarat and Sindh, these were not folk crafts in the diminutive sense. They were sophisticated design systems developed and refined over centuries by communities whose entire livelihood and identity was tied to the precision of the work.</p>
-            <p>The maximalism that Pinterest now calls Grandmillennial style. The earthy tones that Kinfolk magazine positioned as a new kind of minimalism. The layered textiles and handmade objects that fill the mood boards of interior designers charging premium rates for authenticity. All of it has a longer history than the aesthetic it has been absorbed into. And that history has a geography. It is called India. And it has been here for a while.</p>
-            
-            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Renaming Problem</h3>
-            <p>Here is where it gets uncomfortable. There is a pattern in how global design culture engages with non-Western aesthetics. The original context gets stripped. The cultural specificity gets softened into something universally palatable. And then it gets a new name, a cleaner name, one that does not require you to know anything about where it came from.</p>
-            <p>Ikat becomes a geometric print trend. Ajrakh becomes earthy artisanal. Mughal garden motifs become maximalist botanical. The thing itself travels. The origin does not.</p>
-            <p>This is not always malicious. Culture has always moved and mixed and borrowed. But there is a difference between influence acknowledged and influence laundered. When a Western design brand releases a collection heavily inspired by Indian craft traditions and the press release does not mention India once, that is not an accident. That is a choice about what gets credited and what gets consumed. The algorithm did not build this. Intention did. And intention can be examined.</p>
-            
-            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Mood Board That Already Existed</h3>
-            <p>Every aesthetic that currently performs well on Pinterest and has a name like cottagecore or maximalist boho or artisanal earth or any variation of those words has a version that already existed in India. Not as a trend. As a living practice. As something people were making and wearing and building homes around not because a visual platform told them it was having a moment but because it was simply the way things were done.</p>
-            <p>The style boards that designers are now selling as original vision were already on the walls. In the textiles. In the architecture. In the craft traditions of communities that have been doing this work for generations without a hashtag or an aesthetic name or a brand deal. The forgotten style boards already existed. They just existed here.</p>
-            
-            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What Gets Called Inspiration and What Gets Called Influence</h3>
-            <p>There is a version of this conversation that is purely about credit and attribution. That conversation matters and is worth having. But there is a deeper version that is about what happens to originality when it gets disconnected from its roots.</p>
-            <p>When Indian craft gets absorbed into a global aesthetic trend, it often gets praised most loudly in the form that is furthest from the original. The high end brand that does a collection inspired by block printing gets the editorial. The artisan in Bagru whose family has been doing block printing for generations gets, if they are lucky, a supply chain relationship. The aesthetic travels upward. The people do not always travel with it.</p>
-            <p>This is not just a design story. It is a story about how value gets assigned. About which version of a thing gets called innovative and which version gets called traditional. About who gets to be a designer and who gets to be a craftsperson. About what global means when it is applied selectively.</p>
-            
-            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">Why This Matters Beyond Aesthetics</h3>
-            <p>This was never really about moodboards. It was about a much older question. What happens to a culture's relationship with its own visual identity when that identity keeps getting renamed and re-exported back to it as something new?</p>
-            <p>When a young person in India encounters their own craft tradition first through a Western design brand rather than through the community that created it, something has shifted. Not dramatically. Quietly. In the way that things shift when the story of where something came from gets told by someone other than the people it came from.</p>
-            <p>India has centuries of visual intelligence. Colour theory that predates Pantone. Pattern systems that predate graphic design as a profession. Textile traditions that influenced trade routes that shaped the modern world. None of that requires a mood board to validate it. It just requires the people consuming the aesthetic to be honest about where it came from.</p>
         `
     },
     {
