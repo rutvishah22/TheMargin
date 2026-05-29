@@ -273,63 +273,86 @@ const MARGIN_DATABASE = [
         `
     },
     {
-        "id": "the-voice-you-trusted-more-than-your-padosi",
-        "title": "The Voice You Trusted More Than Your Next-Door Neighbour",
-        "subtitle": "On radio, intimacy, and what parasocial really means.",
-        "category": "Archive",
-        "date": "May 04, 2026",
-        "author": "The Margin",
-        "read_time": "4 min",
-        "cover_image": "https://i.pinimg.com/736x/52/c2/2f/52c22f7187c4652fd668bf8f40258084.jpg",
-        "preview_snippet": "Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about Instagram.",
-        "is_gated": false,
-        "content": `
-            <p class="italic text-ink/70 mb-6"><strong>Why this piece exists:</strong> Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about every medium that came after it, including Instagram.</p>
+        id: "before-pinterest-india",
+        title: "Before Pinterest, India Invented It",
+        subtitle: "On how a civilisation that built its entire visual identity around colour, pattern, and craft became an aesthetic trend that the internet forgot to credit.",
+        preview_snippet: "There is always that moment when you realise half the internet is just repackaged memory with better branding. You scroll through a mood board tagged coastal blue and earthy minimalism...",
+        category: "Fashion & Controversy",
+        author: "The Margin",
+        date: "MAY 29, 2026",
+        read_time: "5 MIN",
+        cover_image: "https://i.pinimg.com/736x/ab/1a/86/ab1a864e20d8f361588552a15e2854e7.jpg", 
+        is_gated: false,
+        content: `
+            <p class="editorial-drop-cap">There is always that moment when you realise half the internet is just repackaged memory with better branding.</p>
+            <p>You scroll through a mood board tagged coastal blue and earthy minimalism, through linen textures and hand blocked prints and intricate geometric patterns, and somewhere in the back of your mind something registers. You have seen this before. Not on Pinterest. Not in a design editorial. In the walls of a haveli. In your grandmother's dupatta. In a tradition that has been quietly practising what the internet just discovered last Tuesday.</p>
+            <p>India did not take inspiration from the global aesthetic movement. The global aesthetic movement took inspiration from India. It just forgot to mention that part.</p>
             
-            <p>Before the RJ, radio belonged to everyone, or at least, that was the idea. Community radio placed the microphone in the hands of farmers, women, factory workers. The voice on air was not a personality. It was a mirror. It reflected back the people it served.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What India Was Already Doing</h3>
+            <p>Before moodboards existed as a concept, India had an entire civilisation built around intentional visual culture.</p>
+            <p>The use of colour in Indian textiles was never decorative for its own sake. It was coded. Specific dyes carried specific meanings. The indigo trade routes shaped economies and wars. Block printing traditions in Rajasthan, Kalamkari in Andhra Pradesh, Ajrakh in Gujarat and Sindh, these were not folk crafts in the diminutive sense. They were sophisticated design systems developed and refined over centuries by communities whose entire livelihood and identity was tied to the precision of the work.</p>
+            <p>The maximalism that Pinterest now calls Grandmillennial style. The earthy tones that Kinfolk magazine positioned as a new kind of minimalism. The layered textiles and handmade objects that fill the mood boards of interior designers charging premium rates for authenticity. All of it has a longer history than the aesthetic it has been absorbed into. And that history has a geography. It is called India. And it has been here for a while.</p>
             
-            <h3>The Frequency Shift</h3>
-            <p>Then came liberalisation. India's FM boom in the late 1990s and early 2000s rewired the frequency. Private stations arrived with a format borrowed from the West, and at its centre stood a new kind of figure: the Radio Jockey. Curated, warm, always available.</p>
-            <p>The shift was not just aesthetic. It was structural. A collective voice became a personal one. The RJ did not represent a community. They replaced it. Listeners stopped calling in to report local problems. They called in to dedicate songs to people they were too shy to call directly.</p>
-            <p class="border-l border-ink/30 pl-4 py-1 my-6 italic text-ink/90">Community radio assumed the listener had something to say. FM radio assumed the listener had something to feel.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Renaming Problem</h3>
+            <p>Here is where it gets uncomfortable. There is a pattern in how global design culture engages with non-Western aesthetics. The original context gets stripped. The cultural specificity gets softened into something universally palatable. And then it gets a new name, a cleaner name, one that does not require you to know anything about where it came from.</p>
+            <p>Ikat becomes a geometric print trend. Ajrakh becomes earthy artisanal. Mughal garden motifs become maximalist botanical. The thing itself travels. The origin does not.</p>
+            <p>This is not always malicious. Culture has always moved and mixed and borrowed. But there is a difference between influence acknowledged and influence laundered. When a Western design brand releases a collection heavily inspired by Indian craft traditions and the press release does not mention India once, that is not an accident. That is a choice about what gets credited and what gets consumed. The algorithm did not build this. Intention did. And intention can be examined.</p>
             
-            <h3>The Birth of the Earliest Parasocial Bond</h3>
-            <p>Psychologists call it parasocial relationship, the one-sided bond where you feel you know someone who does not know you exist. Radio perfected it before podcasts, before influencers, before the follow button. The RJ was its earliest mass-market form in India.</p>
-            <p>The voice became a brand. RJs got billboards. Catchphrases. Merchandise. Spin-off shows. Some crossed over into television, films, stand-up. The intimacy that felt accidental was, by then, a product. Engineered in studios, packaged by corporations, delivered at scheduled hours.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Mood Board That Already Existed</h3>
+            <p>Every aesthetic that currently performs well on Pinterest and has a name like cottagecore or maximalist boho or artisanal earth or any variation of those words has a version that already existed in India. Not as a trend. As a living practice. As something people were making and wearing and building homes around not because a visual platform told them it was having a moment but because it was simply the way things were done.</p>
+            <p>The style boards that designers are now selling as original vision were already on the walls. In the textiles. In the architecture. In the craft traditions of communities that have been doing this work for generations without a hashtag or an aesthetic name or a brand deal. The forgotten style boards already existed. They just existed here.</p>
             
-            <h3>Industrialized Closeness</h3>
-            <p>The hypervisual internet did not kill intimacy. It industrialised it. Where the RJ had one voice and a city, an influencer has a face, a body, a lifestyle, a comment section, a merch drop, and a parasocial army spread across three platforms. The bond is louder now. But is it deeper?</p>
-            <p>Radio taught us to trust a stranger's voice before we could see their face. The intimacy it built, in the dark, across airwaves, remains one of the most quietly radical things a medium ever did. Now every medium wants that same closeness. Most of them just use a lot more cameras to get there.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What Gets Called Inspiration and What Gets Called Influence</h3>
+            <p>There is a version of this conversation that is purely about credit and attribution. That conversation matters and is worth having. But there is a deeper version that is about what happens to originality when it gets disconnected from its roots.</p>
+            <p>When Indian craft gets absorbed into a global aesthetic trend, it often gets praised most loudly in the form that is furthest from the original. The high end brand that does a collection inspired by block printing gets the editorial. The artisan in Bagru whose family has been doing block printing for generations gets, if they are lucky, a supply chain relationship. The aesthetic travels upward. The people do not always travel with it.</p>
+            <p>This is not just a design story. It is a story about how value gets assigned. About which version of a thing gets called innovative and which version gets called traditional. About who gets to be a designer and who gets to be a craftsperson. About what global means when it is applied selectively.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">Why This Matters Beyond Aesthetics</h3>
+            <p>This was never really about moodboards. It was about a much older question. What happens to a culture's relationship with its own visual identity when that identity keeps getting renamed and re-exported back to it as something new?</p>
+            <p>When a young person in India encounters their own craft tradition first through a Western design brand rather than through the community that created it, something has shifted. Not dramatically. Quietly. In the way that things shift when the story of where something came from gets told by someone other than the people it came from.</p>
+            <p>India has centuries of visual intelligence. Colour theory that predates Pantone. Pattern systems that predate graphic design as a profession. Textile traditions that influenced trade routes that shaped the modern world. None of that requires a mood board to validate it. It just requires the people consuming the aesthetic to be honest about where it came from.</p>
         `
     },
     {
-        "id": "the-voice-you-trusted-more-than-your-padosi",
-        "title": "The Voice You Trusted More Than Your Next-Door Neighbour",
-        "subtitle": "On radio, intimacy, and what parasocial really means.",
-        "category": "Archive",
-        "date": "May 04, 2026",
-        "author": "The Margin",
-        "read_time": "4 min",
-        "cover_image": "https://i.pinimg.com/736x/52/c2/2f/52c22f7187c4652fd668bf8f40258084.jpg",
-        "preview_snippet": "Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about Instagram.",
-        "is_gated": false,
-        "content": `
-            <p class="italic text-ink/70 mb-6"><strong>Why this piece exists:</strong> Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about every medium that came after it, including Instagram.</p>
+        id: "chand-mera-dil-critique",
+        title: "Is Chand Mera Dil an Indian Version of It Ends With Us?",
+        subtitle: "On the false hopecore we did not ask for and what it says about how Bollywood handles the stories it borrows.",
+        preview_snippet: "Bollywood loves a good aesthetic wrap. It has always known how to take something complicated, something genuinely uncomfortable, and place it inside a visual language so warm and golden...",
+        category: "Culture",
+        author: "The Margin",
+        date: "MAY 29, 2026",
+        read_time: "5 MIN",
+        cover_image: "https://images.zoomnews.com/photo/msid-154215632.jpg?width=1280&height=720&thumbsize=715807", 
+        is_gated: false,
+        content: `
+            <p class="editorial-drop-cap">Bollywood loves a good aesthetic wrap.</p>
+            <p>It has always known how to take something complicated, something genuinely uncomfortable, and place it inside a visual language so warm and golden and cinematically beautiful that the discomfort gets softened into something you can package and sell. This is not a new observation. But Chand Mera Dil makes it worth revisiting because it does something specific that deserves to be named directly.</p>
+            <p>It takes a toxic pattern and makes it look like destined romance. And it does it beautifully. Which is precisely the problem.</p>
             
-            <p>Before the RJ, radio belonged to everyone, or at least, that was the idea. Community radio placed the microphone in the hands of farmers, women, factory workers. The voice on air was not a personality. It was a mirror. It reflected back the people it served.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Comparison That Is Not Incidental</h3>
+            <p>The parallel between Chand Mera Dil and It Ends With Us is not a stretch. It is the point.</p>
+            <p>It Ends With Us, whatever its own complicated production history, was engaging with a specific cultural conversation. The conversation about how abuse gets romanticised in the stories women grow up consuming. About how cycles of harm get packaged as love stories. About what it takes to actually leave and why that is so much harder when the narrative you have been handed frames leaving as giving up rather than surviving.</p>
+            <p>The film was imperfect in how it handled that conversation. But it was at least attempting to have it. Chand Mera Dil is not attempting to have it. Chand Mera Dil is doing the opposite. It is taking the aesthetic of that conversation, the complicated relationship with history, the messy emotional entanglement, the golden hour cinematography, and using it to tell a story where returning to what broke you is framed as healing. That is not a subtle difference. That is the entire difference.</p>
             
-            <h3>The Frequency Shift</h3>
-            <p>Then came liberalisation. India's FM boom in the late 1990s and early 2000s rewired the frequency. Private stations arrived with a format borrowed from the West, and at its centre stood a new kind of figure: the Radio Jockey. Curated, warm, always available.</p>
-            <p>The shift was not just aesthetic. It was structural. A collective voice became a personal one. The RJ did not represent a community. They replaced it. Listeners stopped calling in to report local problems. They called in to dedicate songs to people they were too shy to call directly.</p>
-            <p class="border-l border-ink/30 pl-4 py-1 my-6 italic text-ink/90">Community radio assumed the listener had something to say. FM radio assumed the listener had something to feel.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">Where The Narrative Goes Wrong</h3>
+            <p>The third slide of the carousel identifies exactly where the story takes a turn that matters.</p>
+            <p>It is easy to write a narrative that champions a woman's growth. Gives her ambition, a career, a sense of self outside of a relationship. That part of the story is not the problem. The problem is what the story does with that growth. When a woman's hard won dignity and autonomy gets handed back to the person who compromised it in the first place as a gesture of romantic resolution, that is not a progressive second chance narrative. That is a regression wearing the costume of one.</p>
+            <p>It Ends With Us, at its core, was about the cycle stopping. The whole point was that Lily does not go back. The cycle stops because she chooses to stop it. Whether the film delivered that cleanly is debatable. But the intention of the narrative was a break. Chand Mera Dil quietly suggests that real love means finding your way back to what broke you. That the return is the resolution. That the history between two people, regardless of what that history contains, is its own justification for staying inside it. That is a message. It is being sent deliberately, wrapped in something that looks and feels like a love story. And it is landing with a generation that is actively trying to unlearn exactly this.</p>
             
-            <h3>The Birth of the Earliest Parasocial Bond</h3>
-            <p>Psychologists call it parasocial relationship, the one-sided bond where you feel you know someone who does not know you exist. Radio perfected it before podcasts, before influencers, before the follow button. The RJ was its earliest mass-market form in India.</p>
-            <p>The voice became a brand. RJs got billboards. Catchphrases. Merchandise. Spin-off shows. Some crossed over into television, films, stand-up. The intimacy that felt accidental was, by then, a product. Engineered in studios, packaged by corporations, delivered at scheduled hours.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Comfort of Familiar Harm</h3>
+            <p>This is the part that deserves the most attention. We are consuming content that packages regression as healing. And it is working. Not because audiences are naive but because the packaging is genuinely good. The cinematography is beautiful. The chemistry is real. The longing feels earned. You watch it and something in you responds to it before your critical thinking catches up.</p>
+            <p>That gap between emotional response and critical analysis is where this kind of content does its work. You can appreciate a beautiful frame and simultaneously understand that what the frame is showing you is backwards. Those two things are not mutually exclusive. But the way this content is designed, the soft lighting, the nostalgic score, the leads who are genuinely compelling together, is specifically engineered to make the emotional response arrive faster and louder than the critical one.</p>
+            <p>By the time you have processed what the story is actually saying, you have already felt something about it that is hard to walk back.</p>
             
-            <h3>Industrialized Closeness</h3>
-            <p>The hypervisual internet did not kill intimacy. It industrialised it. Where the RJ had one voice and a city, an influencer has a face, a body, a lifestyle, a comment section, a merch drop, and a parasocial army spread across three platforms. The bond is louder now. But is it deeper?</p>
-            <p>Radio taught us to trust a stranger's voice before we could see their face. The intimacy it built, in the dark, across airwaves, remains one of the most quietly radical things a medium ever did. Now every medium wants that same closeness. Most of them just use a lot more cameras to get there.</p>
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">The Generational Stakes</h3>
+            <p>Because the people watching this are not watching it in a vacuum. They are a generation that grew up on a steady diet of Bollywood narratives that normalised exactly what therapists and counsellors and support organisations are now spending significant resources helping people unlearn.</p>
+            <p>The idea that love means staying regardless of what you are staying inside. That history between two people is a reason to return rather than a reason to be careful. That a dramatic, complicated, painful relationship is more real and more worthy than a stable one. That walking away from harm is just a phase before you find your way back.</p>
+            <p>These are not just plot points. They are frameworks. They shape what people expect from relationships. What they are willing to accept. What they call love and what they call giving up. Chand Mera Dil is not uniquely responsible for any of this. It is one show in a long tradition of shows that have made the same choices. But it is a recent one. It is a well made one. And it is delivering the same message to a generation that finally has enough language to name what the message is.</p>
+            
+            <h3 class="font-serif font-bold text-lg mt-8 mb-4 text-ink dark:text-darkInk">What Bollywood Still Has Not Learned</h3>
+            <p>The internet spent the last year watching the discourse around accountability in romantic narratives reach levels of nuance and visibility that would have been unimaginable a decade ago. Audiences are more literate about toxic relationship dynamics than they have ever been. The language of cycles, of patterns, of what healthy actually looks like as opposed to what it is supposed to feel like, that language is genuinely widespread now in a way it was not before.</p>
+            <p>And mainstream cinema keeps responding to this shift by aestheticising the exact things the shift is trying to address. Not because the filmmakers are unaware. But because the aesthetic of complicated love still sells. Because a golden hour filter on something harmful still feels better than a clear frame on something healthy. Because cinema, especially Bollywood, has always known that feelings travel faster than analysis and has built an entire industry on that knowledge.</p>
+            <p>There is a massive difference between a relationship having history and that history being a reason to stay. Chand Mera Dil knows this distinction exists. It just chose the prettier side of it. And we are still being told, frame by beautiful frame, that walking away from harm is just a temporary phase before the real ending begins.</p>
         `
     },
     {

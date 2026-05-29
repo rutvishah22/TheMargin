@@ -108,9 +108,9 @@
         .snap-card {
             scroll-snap-align: start;
         }
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             .snap-card {
-                scroll-snap-align: center;
+                scroll-snap-align: stretch;
             }
         }
     </style>
@@ -304,28 +304,25 @@
 
             let htmlPayload = '';
 
-            // 1. HORIZONTAL CAROUSEL SHOWCASE (With Section Smooth Snapping Physics Added)
+            // 1. FULL-WIDTH HERO TRIO ROW (3 Columns Flat)
             htmlPayload += `
-                <section class="w-full mb-16 md:mb-20">
+                <section class="w-full mb-14">
                     <div class="w-full flex items-center justify-between border-b border-ink/10 dark:border-darkInk/10 pb-3 mb-6">
                         <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-ink/50 dark:text-darkInk/50">
                             Current Focus // Featured Essays
                         </h3>
-                        <div class="hidden sm:flex items-center gap-2 text-[10px] tracking-wider text-ink/30 dark:text-darkInk/30 font-bold">
-                            SWIPE INSIDE ARCHIVE &rarr;
-                        </div>
+                        <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">VOL. 02</span>
                     </div>
                     
-                    <!-- Snap Physics Applied Here -->
-                    <div class="w-full overflow-x-auto no-scrollbar flex gap-6 md:gap-8 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 snap-carousel">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-12">
             `;
 
             topTriptychArticles.forEach((article, idx) => {
                 htmlPayload += `
-                    <div onclick="switchView('article', '${article.id}')" class="min-w-[85vw] sm:min-w-[38vw] lg:min-w-[28vw] max-w-[320px] lg:max-w-[360px] flex-shrink-0 snap-card cursor-pointer group flex flex-col justify-between">
-                        <div class="space-y-3.5">
-                            <div class="relative w-full aspect-[16/10] overflow-hidden border border-ink/10 dark:border-darkInk/10 bg-ink/5 z-10">
-                                <img src="${article.cover_image}" alt="Feature Frame" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out">
+                    <div onclick="switchView('article', '${article.id}')" class="cursor-pointer group flex flex-col justify-between h-full pb-4">
+                        <div class="space-y-4">
+                            <div class="relative w-full aspect-[16/10] overflow-hidden border border-ink/10 dark:border-darkInk/10 bg-ink/5">
+                                <img src="${article.cover_image}" alt="Feature Frame" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out">
                                 <div class="absolute top-2 left-2 bg-canvas/90 dark:bg-darkCanvas/90 text-ink dark:text-darkInk text-[8px] font-black tracking-widest px-2 py-0.5 uppercase">
                                     0${idx+1} // ${article.category}
                                 </div>
@@ -337,7 +334,7 @@
                                 ${article.preview_snippet}
                             </p>
                         </div>
-                        <div class="pt-3 flex items-center justify-between border-t border-ink/5 dark:border-darkInk/5 mt-4 text-[10px] uppercase tracking-wider font-bold">
+                        <div class="pt-3 flex items-center justify-between border-t border-ink/5 dark:border-darkInk/5 mt-5 text-[10px] uppercase tracking-wider font-bold">
                             <span>Read Track</span>
                             <span class="text-ink/40 dark:text-darkInk/40 font-normal">${article.read_time}</span>
                         </div>
@@ -350,60 +347,52 @@
                 </section>
             `;
 
-            // 2. STABILIZED SYSTEM: COMPACT SIDE PANEL + AUTOMATIC 3-COLUMN ADAPTIVE GRID
+            // 2. HORIZONTAL INTERSTITIAL NOTEBOOK PAUSE (Editorial Intent + Recent Dispatches side-by-side wide)
             htmlPayload += `
-                <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 md:gap-10 xl:gap-16 items-start">
+                <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start border-t border-b border-ink/10 dark:border-darkInk/10 py-10 my-14 bg-ink/[0.01] -mx-4 px-4 sm:mx-0 sm:px-0">
                     
-                    <!-- LEFT CONTAINER: Editorial Blocks -->
-                    <div class="lg:col-span-4 lg:sticky lg:top-6 space-y-8 mb-12 lg:mb-0">
-                        <div class="border-b border-ink/10 dark:border-darkInk/10 py-4 mb-4 flex items-center justify-between">
-                            <h3 class="text-[11px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold">
-                                Identity & Focus
-                            </h3>
-                            <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">VOL. 02</span>
-                        </div>
+                    <!-- Left Block: Identity Notebook -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-ink dark:bg-darkInk inline-block"></span>FROM THE NOTEBOOK // EDITORIAL INTENT
+                        </h4>
+                        <p class="font-cursive italic text-base md:text-lg text-ink/80 dark:text-darkInk/80 leading-relaxed font-light">
+                            "We spend hours analyzing why a single collection caused an uproar, or why everyone missed the point of that one indie film scene. These are the unedited parameters before they spin into real essays."
+                        </p>
+                        <p class="text-[9px] uppercase tracking-[0.2em] text-ink/50 dark:text-darkInk/50 font-bold">— R. & P.</p>
+                    </div>
 
-                        <!-- Notebook Box Fragment -->
-                        <div class="bg-ink/[0.01] border border-ink/10 dark:border-darkInk/10 p-6">
-                            <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold mb-4 flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-ink dark:bg-darkInk inline-block"></span>EDITORIAL INTENT
-                            </h4>
-                            <p class="font-cursive italic text-base text-ink/80 dark:text-darkInk/80 leading-relaxed font-light">
-                                "We spend hours analyzing why a single collection caused an uproar, or why everyone missed the point of that one indie film scene. These are the unedited parameters before they spin into real essays."
-                            </p>
-                            <p class="text-[9px] uppercase tracking-[0.2em] text-ink/50 dark:text-darkInk/50 mt-4 font-bold">— R. & P.</p>
-                        </div>
-
-                        <!-- Recent dispatches feed -->
-                        <div>
-                            <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold border-b border-ink/10 dark:border-darkInk/10 pb-2 mb-4">
-                                RECENT DISPATCHES
-                            </h4>
-                            <ul class="space-y-4 text-xs">
-                                ${MARGIN_DATABASE.slice(0, 4).map((art, idx) => `
-                                    <li class="cursor-pointer group flex gap-3 items-start" onclick="switchView('article', '${art.id}')">
-                                        <span class="font-serif font-black text-ink/20 dark:text-darkInk/20 group-hover:text-ink dark:group-hover:text-darkInk transition-colors">0${idx+1}</span>
-                                        <div>
-                                            <h5 class="font-semibold text-ink dark:text-darkInk group-hover:underline leading-tight">${art.title}</h5>
-                                            <span class="text-[9px] uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">${art.category}</span>
-                                        </div>
-                                    </li>
-                                `).join('')}
-                            </ul>
+                    <!-- Right Block: Recent Dispatches Dashboard -->
+                    <div class="lg:col-span-7 lg:border-l lg:border-ink/10 lg:pl-10">
+                        <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold pb-2 mb-4">
+                            RECENT DISPATCHES
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                            ${MARGIN_DATABASE.slice(0, 4).map((art, idx) => `
+                                <div class="cursor-pointer group flex gap-3 items-start border-b border-ink/5 dark:border-darkInk/5 pb-2" onclick="switchView('article', '${art.id}')">
+                                    <span class="font-serif font-black text-xs text-ink/20 dark:text-darkInk/20 group-hover:text-ink dark:group-hover:text-darkInk transition-colors">0${idx+1}</span>
+                                    <div>
+                                        <h5 class="font-semibold text-xs text-ink dark:text-darkInk group-hover:underline leading-tight line-clamp-1">${art.title}</h5>
+                                        <span class="text-[9px] uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">${art.category}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
                         </div>
                     </div>
-                    
-                    <!-- RIGHT CONTAINER: UNLOCKED BROAD STREAM GRID -->
-                    <!-- Automatically turns from a 2-column layout into a gorgeous 3-column layout at 1280px screen size -->
-                    <div class="lg:col-span-8 lg:border-l lg:border-ink/10 lg:pl-10">
-                        <div class="border-b border-ink/10 dark:border-darkInk/10 py-4 mb-10 flex items-center justify-between hidden lg:flex">
-                            <h3 class="text-[11px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold">
-                                Index Records &bull; ${currentCategory.toUpperCase()}
-                            </h3>
-                            <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">2026</span>
-                        </div>
+                </section>
+            `;
 
-                        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12">
+            // 3. UNLOCKED FULL-WIDTH INDEX RECORDS GRID (3 Columns Everywhere on Large Display Portals)
+            htmlPayload += `
+                <section class="w-full">
+                    <div class="border-b border-ink/10 dark:border-darkInk/10 pb-3 mb-10 flex items-center justify-between">
+                        <h3 class="text-[11px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold">
+                            Index Records &bull; ${currentCategory.toUpperCase()}
+                        </h3>
+                        <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">2026</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
             `;
                 
             const articlesToShow = remainingArticles.slice(0, visibleArchiveCount);
@@ -412,7 +401,7 @@
                 articlesToShow.forEach((article) => {
                     htmlPayload += `
                         <article class="flex flex-col cursor-pointer group justify-between h-full border-b border-ink/5 dark:border-darkInk/5 pb-6" onclick="switchView('article', '${article.id}')">
-                            <div class="space-y-3.5">
+                            <div class="space-y-4">
                                 <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">
                                     <span>${article.category}</span>
                                     <span>${article.date}</span>
@@ -425,7 +414,7 @@
                                 </h4>
                                 <p class="text-xs text-ink/70 dark:text-darkInk/70 font-normal leading-relaxed line-clamp-2">${article.preview_snippet}</p>
                             </div>
-                            <div class="pt-4">
+                            <div class="pt-5">
                                 <span class="inline-block text-[10px] uppercase tracking-[0.25em] font-bold border-b border-ink dark:border-darkInk pb-0.5 group-hover:text-ink/40 dark:group-hover:text-darkInk/40 fade-transition">Read Essay &rarr;</span>
                             </div>
                         </article>
@@ -444,12 +433,13 @@
             }
             
             htmlPayload += `
-                        </section>
+                    </div>
+                </section>
             `;
 
             if (remainingArticles.length > visibleArchiveCount) {
                 htmlPayload += `
-                    <div class="w-full flex justify-center mt-12 mb-12">
+                    <div class="w-full flex justify-center mt-16 mb-12">
                         <button onclick="loadMoreArticles()" class="text-[11px] uppercase tracking-[0.3em] font-bold text-canvas dark:text-darkCanvas bg-ink dark:bg-darkInk hover:bg-transparent dark:hover:bg-transparent hover:text-ink dark:hover:text-darkInk px-8 py-3.5 border border-ink dark:border-darkInk transition-all duration-300">
                             Load Archive Series
                         </button>
@@ -457,14 +447,9 @@
                 `;
             }
 
-            htmlPayload += `
-                    </div>
-                </div>
-            `;
-
             // Global Newsletter Channel
             htmlPayload += `
-                <div class="w-full max-w-2xl mx-auto mt-20 pt-12 border-t border-ink/10 dark:border-darkInk/10 text-center px-2">
+                <div class="w-full max-w-2xl mx-auto mt-24 pt-12 border-t border-ink/10 dark:border-darkInk/10 text-center px-2">
                     <h4 class="font-serif text-xl uppercase tracking-tight text-ink dark:text-darkInk font-bold mb-2">Straight to your Space</h4>
                     <p class="text-xs text-ink/50 dark:text-darkInk/50 font-semibold mb-6">No clutter. No algorithms. Just our latest critiques sent directly to your screen.</p>
                     <form onsubmit="alert('Welcome to our circle.'); event.preventDefault();" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
