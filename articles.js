@@ -301,5 +301,65 @@ const MARGIN_DATABASE = [
             <p>The hypervisual internet did not kill intimacy. It industrialised it. Where the RJ had one voice and a city, an influencer has a face, a body, a lifestyle, a comment section, a merch drop, and a parasocial army spread across three platforms. The bond is louder now. But is it deeper?</p>
             <p>Radio taught us to trust a stranger's voice before we could see their face. The intimacy it built, in the dark, across airwaves, remains one of the most quietly radical things a medium ever did. Now every medium wants that same closeness. Most of them just use a lot more cameras to get there.</p>
         `
+    },
+    {
+        "id": "the-voice-you-trusted-more-than-your-padosi",
+        "title": "The Voice You Trusted More Than Your Next-Door Neighbour",
+        "subtitle": "On radio, intimacy, and what parasocial really means.",
+        "category": "Archive",
+        "date": "May 04, 2026",
+        "author": "The Margin",
+        "read_time": "4 min",
+        "cover_image": "https://i.pinimg.com/736x/52/c2/2f/52c22f7187c4652fd668bf8f40258084.jpg",
+        "preview_snippet": "Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about Instagram.",
+        "is_gated": false,
+        "content": `
+            <p class="italic text-ink/70 mb-6"><strong>Why this piece exists:</strong> Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about every medium that came after it, including Instagram.</p>
+            
+            <p>Before the RJ, radio belonged to everyone, or at least, that was the idea. Community radio placed the microphone in the hands of farmers, women, factory workers. The voice on air was not a personality. It was a mirror. It reflected back the people it served.</p>
+            
+            <h3>The Frequency Shift</h3>
+            <p>Then came liberalisation. India's FM boom in the late 1990s and early 2000s rewired the frequency. Private stations arrived with a format borrowed from the West, and at its centre stood a new kind of figure: the Radio Jockey. Curated, warm, always available.</p>
+            <p>The shift was not just aesthetic. It was structural. A collective voice became a personal one. The RJ did not represent a community. They replaced it. Listeners stopped calling in to report local problems. They called in to dedicate songs to people they were too shy to call directly.</p>
+            <p class="border-l border-ink/30 pl-4 py-1 my-6 italic text-ink/90">Community radio assumed the listener had something to say. FM radio assumed the listener had something to feel.</p>
+            
+            <h3>The Birth of the Earliest Parasocial Bond</h3>
+            <p>Psychologists call it parasocial relationship, the one-sided bond where you feel you know someone who does not know you exist. Radio perfected it before podcasts, before influencers, before the follow button. The RJ was its earliest mass-market form in India.</p>
+            <p>The voice became a brand. RJs got billboards. Catchphrases. Merchandise. Spin-off shows. Some crossed over into television, films, stand-up. The intimacy that felt accidental was, by then, a product. Engineered in studios, packaged by corporations, delivered at scheduled hours.</p>
+            
+            <h3>Industrialized Closeness</h3>
+            <p>The hypervisual internet did not kill intimacy. It industrialised it. Where the RJ had one voice and a city, an influencer has a face, a body, a lifestyle, a comment section, a merch drop, and a parasocial army spread across three platforms. The bond is louder now. But is it deeper?</p>
+            <p>Radio taught us to trust a stranger's voice before we could see their face. The intimacy it built, in the dark, across airwaves, remains one of the most quietly radical things a medium ever did. Now every medium wants that same closeness. Most of them just use a lot more cameras to get there.</p>
+        `
+    },
+    {
+        "id": "the-voice-you-trusted-more-than-your-padosi",
+        "title": "The Voice You Trusted More Than Your Next-Door Neighbour",
+        "subtitle": "On radio, intimacy, and what parasocial really means.",
+        "category": "Archive",
+        "date": "May 04, 2026",
+        "author": "The Margin",
+        "read_time": "4 min",
+        "cover_image": "https://i.pinimg.com/736x/52/c2/2f/52c22f7187c4652fd668bf8f40258084.jpg",
+        "preview_snippet": "Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about Instagram.",
+        "is_gated": false,
+        "content": `
+            <p class="italic text-ink/70 mb-6"><strong>Why this piece exists:</strong> Radio is one of the most underwritten chapters in India's media history. This editorial traces how a collective public voice became a private parasocial product, and what that shift tells us about every medium that came after it, including Instagram.</p>
+            
+            <p>Before the RJ, radio belonged to everyone, or at least, that was the idea. Community radio placed the microphone in the hands of farmers, women, factory workers. The voice on air was not a personality. It was a mirror. It reflected back the people it served.</p>
+            
+            <h3>The Frequency Shift</h3>
+            <p>Then came liberalisation. India's FM boom in the late 1990s and early 2000s rewired the frequency. Private stations arrived with a format borrowed from the West, and at its centre stood a new kind of figure: the Radio Jockey. Curated, warm, always available.</p>
+            <p>The shift was not just aesthetic. It was structural. A collective voice became a personal one. The RJ did not represent a community. They replaced it. Listeners stopped calling in to report local problems. They called in to dedicate songs to people they were too shy to call directly.</p>
+            <p class="border-l border-ink/30 pl-4 py-1 my-6 italic text-ink/90">Community radio assumed the listener had something to say. FM radio assumed the listener had something to feel.</p>
+            
+            <h3>The Birth of the Earliest Parasocial Bond</h3>
+            <p>Psychologists call it parasocial relationship, the one-sided bond where you feel you know someone who does not know you exist. Radio perfected it before podcasts, before influencers, before the follow button. The RJ was its earliest mass-market form in India.</p>
+            <p>The voice became a brand. RJs got billboards. Catchphrases. Merchandise. Spin-off shows. Some crossed over into television, films, stand-up. The intimacy that felt accidental was, by then, a product. Engineered in studios, packaged by corporations, delivered at scheduled hours.</p>
+            
+            <h3>Industrialized Closeness</h3>
+            <p>The hypervisual internet did not kill intimacy. It industrialised it. Where the RJ had one voice and a city, an influencer has a face, a body, a lifestyle, a comment section, a merch drop, and a parasocial army spread across three platforms. The bond is louder now. But is it deeper?</p>
+            <p>Radio taught us to trust a stranger's voice before we could see their face. The intimacy it built, in the dark, across airwaves, remains one of the most quietly radical things a medium ever did. Now every medium wants that same closeness. Most of them just use a lot more cameras to get there.</p>
+        `
     }
 ];
