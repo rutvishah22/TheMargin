@@ -8,10 +8,13 @@
     <meta name="description" content="An independent, uncensored digital space for modern critique across culture, fashion, film, society, and the internet.">
     <meta name="keywords" content="The Margin, critique, cultural essay, fashion controversy, independent zine">
     
+    <!-- Google Search Console Site Verification Engine Hook -->
     <meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_TOKEN_HERE">
 
+    <!-- Tailwind CSS Rendering Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Premium Architectural Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
@@ -70,7 +73,7 @@
             bottom: -4px;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 1px;
             background-color: #1C1C1C;
             transition: width 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -89,18 +92,21 @@
 </head>
 <body class="font-sans antialiased selection:bg-ink selection:text-canvas">
 
+    <!-- ARTIFACT CONTENT DATABASE REGISTRATION LINK -->
     <script src="articles.js"></script>
 
+    <!-- MAIN PLATFORM WRAPPER -->
     <div class="min-h-screen flex flex-col px-4 sm:px-6 md:px-12 lg:px-16 py-6 md:py-8">
         
-        <header class="relative w-full flex flex-col items-center justify-center border-b-2 border-ink pb-6 mb-8 md:mb-12">
+        <!-- HEADER APEX BLOCK (Polished down to a fine 1px light hairline rule) -->
+        <header class="relative w-full flex flex-col items-center justify-center border-b border-ink/10 pb-6 mb-8 md:mb-12">
             <nav class="md:absolute top-2 right-0 flex gap-6 text-[11px] uppercase tracking-[0.25em] font-semibold text-ink/70 mb-6 md:mb-0">
                 <button onclick="switchView('home')" class="nav-link text-ink transition-colors duration-300">Home</button>
                 <button onclick="switchView('about')" class="nav-link text-ink transition-colors duration-300">About</button>
                 <button onclick="switchView('contact')" class="nav-link text-ink transition-colors duration-300">Contact</button>
             </nav>
 
-            <h1 onclick="switchView('home')" class="font-sans font-black uppercase text-4xl md:text-7xl tracking-[0.1em] text-center cursor-pointer select-none mb-2 pt-4 md:pt-6 pl-[0.1em]">
+            <h1 onclick="switchView('home')" class="font-sans font-black uppercase text-4xl md:text-7xl tracking-[0.1em] text-center cursor-pointer select-none mb-3 pt-4 md:pt-6 pl-[0.1em]">
                 THE MARGIN
             </h1>
             <div class="flex items-center gap-4 w-full justify-center">
@@ -112,10 +118,11 @@
             </div>
         </header>
 
-        <div id="filter-bar" class="w-full border-b border-ink/5 mb-8 md:mb-12 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <!-- HORIZONTAL FILTER BAR TRACK -->
+        <div id="filter-bar" class="w-full border-b border-ink/5 mb-12 md:mb-16 -mx-4 px-4 sm:mx-0 sm:px-0">
             <div class="w-full overflow-x-auto no-scrollbar flex justify-start md:justify-center pb-4 scroll-smooth">
                 <div class="flex gap-6 md:gap-8 text-[11px] uppercase tracking-[0.2em] font-bold whitespace-nowrap px-4 md:px-0">
-                    <button onclick="filterCategory('All')" class="cat-btn text-ink border-b-2 border-ink pb-1 fade-transition">All</button>
+                    <button onclick="filterCategory('All')" class="cat-btn text-ink border-b border-ink pb-1 fade-transition">All</button>
                     <button onclick="filterCategory('Mainstream')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Mainstream</button>
                     <button onclick="filterCategory('Archive')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Archive</button>
                     <button onclick="filterCategory('Culture')" class="cat-btn text-ink/40 hover:text-ink pb-1 fade-transition">Culture</button>
@@ -125,10 +132,13 @@
             </div>
         </div>
 
+        <!-- MAIN MOUNT CANVAS INTERFACE -->
         <main id="view-container" class="flex-grow w-full max-w-7xl mx-auto opacity-100 fade-transition">
-            </main>
+            <!-- Content Injected Dynamically By Application Engine -->
+        </main>
 
-        <footer class="w-full mt-24 md:mt-40 pt-12 md:pt-16 border-t-2 border-ink">
+        <!-- COLOPHON FOOTER ARCE HUB -->
+        <footer class="w-full mt-24 md:mt-40 pt-12 md:pt-16 border-t border-ink/10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 text-left text-xs mb-12">
                 <div>
                     <h5 class="font-sans uppercase tracking-[0.25em] text-ink text-[11px] font-bold mb-4">The Publication</h5>
@@ -151,6 +161,7 @@
         </footer>
     </div>
 
+    <!-- MAIN PLATFORM SCRIPT LOGIC ENGINE -->
     <script>
         let currentCategory = 'All';
         let currentView = 'home';
@@ -184,9 +195,9 @@
             document.querySelectorAll('.cat-btn').forEach(btn => {
                 if(btn.innerText.toLowerCase() === category.toLowerCase()) {
                     btn.classList.remove('text-ink/40', 'hover:text-ink');
-                    btn.classList.add('text-ink', 'border-b-2', 'border-ink');
+                    btn.classList.add('text-ink', 'border-b', 'border-ink');
                 } else {
-                    btn.classList.remove('text-ink', 'border-b-2', 'border-ink');
+                    btn.classList.remove('text-ink', 'border-b', 'border-ink');
                     btn.classList.add('text-ink/40', 'hover:text-ink');
                 }
             });
@@ -238,47 +249,52 @@
 
             let htmlPayload = '';
 
-            // 1. MINIMAL + BOLD SPLIT-SCREEN MAGAZINE HERO COVER
+            // 1. AN INDIE-PRINT FLOATING HERO (Stripped heavy box line, added offset framing detail)
             htmlPayload += `
-                <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 border border-ink mb-16 md:mb-24 cursor-pointer group" onclick="switchView('article', '${latestArticle.id}')">
-                    <div class="lg:col-span-7 p-6 md:p-12 flex flex-col justify-between bg-ink text-canvas order-2 lg:order-1">
+                <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-20 md:mb-28 cursor-pointer group" onclick="switchView('article', '${latestArticle.id}')">
+                    <div class="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1 pr-0 lg:pr-6">
                         <div>
-                            <div class="inline-block bg-canvas text-ink text-[9px] uppercase tracking-[0.25em] px-3 py-1 font-bold mb-6">
-                                FEATURED ESSAY &bull; ${latestArticle.category}
+                            <div class="inline-block text-ink text-[10px] uppercase tracking-[0.25em] font-bold mb-4">
+                                Featured Content &mdash; ${latestArticle.category}
                             </div>
-                            <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-[1.1] mb-4 text-canvas group-hover:text-canvas/80 transition-colors duration-300">
+                            <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-[1.15] mb-5 text-ink group-hover:text-ink/70 transition-colors duration-300">
                                 ${latestArticle.title}
                             </h2>
-                            <p class="text-[11px] font-sans tracking-[0.2em] text-canvas/50 uppercase font-semibold mb-6">${latestArticle.subtitle}</p>
-                            <p class="text-sm text-canvas/70 leading-relaxed font-light line-clamp-4 lg:line-clamp-6">
+                            <p class="text-[11px] font-sans tracking-[0.2em] text-ink/40 uppercase font-bold mb-6">${latestArticle.subtitle}</p>
+                            <p class="text-[13px] text-ink/70 leading-relaxed font-normal line-clamp-4 lg:line-clamp-5">
                                 ${latestArticle.preview_snippet}
                             </p>
                         </div>
-                        <div class="pt-8 flex justify-between items-center border-t border-canvas/10 mt-8">
-                            <span class="text-[11px] uppercase tracking-[0.25em] font-semibold group-hover:underline">Read Editorial &rarr;</span>
-                            <span class="text-[10px] uppercase tracking-widest text-canvas/40">${latestArticle.read_time}</span>
+                        <div class="pt-6 flex justify-between items-center border-t border-ink/10 mt-8">
+                            <span class="text-[11px] uppercase tracking-[0.25em] font-bold group-hover:translate-x-1 transition-transform duration-300">Read Editorial &rarr;</span>
+                            <span class="text-[10px] uppercase tracking-widest text-ink/40 font-semibold">${latestArticle.read_time}</span>
                         </div>
                     </div>
-                    <div class="lg:col-span-5 h-[35vh] lg:h-auto min-h-[300px] overflow-hidden order-1 lg:order-2 relative bg-ink/5 border-b lg:border-b-0 lg:border-l border-ink">
-                        <img src="${latestArticle.cover_image}" alt="Cover" class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out">
+                    
+                    <!-- Design Upgrade Detail: Offset floating image frame -->
+                    <div class="lg:col-span-6 order-1 lg:order-2 p-2 relative">
+                        <div class="absolute inset-0 border border-ink/5 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500 ease-out"></div>
+                        <div class="w-full h-[40vh] lg:h-[50vh] overflow-hidden relative bg-ink/5 border border-ink/10 z-10">
+                            <img src="${latestArticle.cover_image}" alt="Cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out">
+                        </div>
                     </div>
                 </section>
             `;
 
             // 2. STICKY HIGHLIGHT TRANSITION CONTAINER STRUCTURE
-            // The magic class configuration happens inside 'sticky top-0 bg-canvas/90 backdrop-blur-md'
             htmlPayload += `
-                <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 md:gap-12 items-start">
+                <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 md:gap-16 items-start">
                     
+                    <!-- LEFT COLUMN: STREAM ARCHIVE -->
                     <div class="lg:col-span-8">
-                        <div class="sticky top-0 z-30 bg-canvas/90 backdrop-blur-md border-b-2 border-ink py-4 mb-10 flex items-center justify-between">
-                            <h3 class="text-[12px] uppercase tracking-[0.3em] text-ink font-extrabold">
-                                INDEX STREAM / ${currentCategory.toUpperCase()}
+                        <div class="sticky top-0 z-30 bg-canvas/90 backdrop-blur-md border-b border-ink/10 py-4 mb-12 flex items-center justify-between">
+                            <h3 class="text-[11px] uppercase tracking-[0.3em] text-ink font-bold">
+                                Index Stream &bull; ${currentCategory.toUpperCase()}
                             </h3>
                             <span class="text-[10px] text-ink/40 tracking-wider font-bold">VOL. 02 // 2026</span>
                         </div>
 
-                        <section class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
             `;
                 
             const articlesToShow = remainingArticles.slice(0, visibleArchiveCount);
@@ -286,13 +302,13 @@
             if(articlesToShow.length > 0) {
                 articlesToShow.forEach((article) => {
                     htmlPayload += `
-                        <article class="flex flex-col cursor-pointer group justify-between h-full border-b border-ink/10 pb-8" onclick="switchView('article', '${article.id}')">
+                        <article class="flex flex-col cursor-pointer group justify-between h-full border-b border-ink/5 pb-8" onclick="switchView('article', '${article.id}')">
                             <div class="space-y-4">
                                 <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-ink/40 font-bold">
                                     <span>${article.category}</span>
                                     <span>${article.date}</span>
                                 </div>
-                                <div class="w-full aspect-[16/10] overflow-hidden border border-ink bg-ink/5 relative">
+                                <div class="w-full aspect-[16/10] overflow-hidden border border-ink/10 bg-ink/5 relative">
                                     <img src="${article.cover_image}" alt="Archive Media" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out">
                                 </div>
                                 <h4 class="font-serif text-xl tracking-tight text-ink font-bold group-hover:text-ink/60 transition-colors duration-300">
@@ -301,7 +317,7 @@
                                 <p class="text-xs text-ink/70 font-normal leading-relaxed line-clamp-3">${article.preview_snippet}</p>
                             </div>
                             <div class="pt-6">
-                                <span class="inline-block text-[10px] uppercase tracking-[0.25em] font-bold border-b-2 border-ink pb-0.5 group-hover:border-ink/20 group-hover:text-ink/40 fade-transition">Read Essay &rarr;</span>
+                                <span class="inline-block text-[10px] uppercase tracking-[0.25em] font-bold border-b border-ink pb-0.5 group-hover:border-ink/20 group-hover:text-ink/40 fade-transition">Read Essay &rarr;</span>
                             </div>
                         </article>
                     `;
@@ -320,7 +336,7 @@
             if (remainingArticles.length > visibleArchiveCount) {
                 htmlPayload += `
                     <div class="w-full flex justify-center mt-12 mb-16">
-                        <button onclick="loadMoreArticles()" class="text-[11px] uppercase tracking-[0.3em] font-bold text-canvas bg-ink hover:bg-transparent hover:text-ink px-10 py-4 border-2 border-ink transition-all duration-300">
+                        <button onclick="loadMoreArticles()" class="text-[11px] uppercase tracking-[0.3em] font-bold text-canvas bg-ink hover:bg-transparent hover:text-ink px-10 py-4 border border-ink transition-all duration-300">
                             Load Archive Series
                         </button>
                     </div>
@@ -330,11 +346,13 @@
             htmlPayload += `
                     </div>
                     
-                    <div class="lg:col-span-4 lg:border-l-2 lg:border-ink lg:pl-8 pt-12 lg:pt-0 space-y-16 sticky top-20">
+                    <!-- 3. RIGHT COLUMN: MINIMAL EDITORIAL SIDE PANEL BLOCK -->
+                    <div class="lg:col-span-4 lg:border-l lg:border-ink/10 lg:pl-10 pt-12 lg:pt-0 space-y-16 sticky top-20">
                         
-                        <div class="bg-ink/[0.02] border-2 border-ink p-6">
-                            <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink font-extrabold mb-4 flex items-center gap-2">
-                                <span class="w-2 h-2 bg-ink inline-block"></span>EDITORIAL INTENT
+                        <!-- Notebook Box Fragment (Muted border line update) -->
+                        <div class="bg-ink/[0.01] border border-ink/10 p-6">
+                            <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink font-bold mb-4 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-ink inline-block"></span>EDITORIAL INTENT
                             </h4>
                             <p class="font-cursive italic text-base text-ink/80 leading-relaxed font-light">
                                 "We spend hours analyzing why a single collection caused an uproar, or why everyone missed the point of that one indie film scene. These are the unedited parameters before they spin into real essays."
@@ -342,8 +360,9 @@
                             <p class="text-[9px] uppercase tracking-[0.2em] text-ink/50 mt-4 font-bold">— R. & P.</p>
                         </div>
 
+                        <!-- Recent dispatches feed line clean up -->
                         <div>
-                            <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink font-extrabold border-b-2 border-ink pb-2 mb-4">
+                            <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink font-bold border-b border-ink/10 pb-2 mb-4">
                                 RECENT DISPATCHES
                             </h4>
                             <ul class="space-y-4 text-xs">
@@ -365,12 +384,12 @@
 
             // Global Newsletter Channel
             htmlPayload += `
-                <div class="w-full max-w-2xl mx-auto mt-24 pt-16 border-t-2 border-ink text-center px-2">
+                <div class="w-full max-w-2xl mx-auto mt-24 pt-16 border-t border-ink/10 text-center px-2">
                     <h4 class="font-serif text-2xl uppercase tracking-tight text-ink font-bold mb-2">Straight to your Space</h4>
                     <p class="text-xs text-ink/50 font-semibold mb-8">No clutter. No algorithms. Just our latest critiques sent directly to your screen.</p>
                     <form onsubmit="alert('Welcome to our circle.'); event.preventDefault();" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                        <input type="email" placeholder="ENTER YOUR EMAIL" required class="flex-grow bg-transparent border-b-2 border-ink/20 focus:border-ink px-2 py-2 text-[11px] tracking-widest outline-none transition-colors duration-300 font-bold mb-2 sm:mb-0">
-                        <button type="submit" class="text-[11px] uppercase tracking-[0.25em] font-bold border-b-2 border-ink hover:text-ink/50 pb-1 fade-transition self-center sm:self-auto">Subscribe</button>
+                        <input type="email" placeholder="ENTER YOUR EMAIL" required class="flex-grow bg-transparent border-b border-ink/10 focus:border-ink px-2 py-2 text-[11px] tracking-widest outline-none transition-colors duration-300 font-bold mb-2 sm:mb-0">
+                        <button type="submit" class="text-[11px] uppercase tracking-[0.25em] font-bold border-b border-ink hover:text-ink/50 pb-1 fade-transition self-center sm:self-auto">Subscribe</button>
                     </form>
                 </div>
             `;
@@ -397,7 +416,7 @@
                         </p>
                     </div>
 
-                    <div class="w-full h-[2px] bg-ink mb-12"></div>
+                    <div class="w-full h-[1px] bg-ink/10 mb-12"></div>
 
                     <div class="md:columns-2 gap-x-16 text-sm text-ink/80 font-normal leading-relaxed tracking-wide font-sans balance-text">
                         <p class="editorial-drop-cap">
@@ -412,7 +431,7 @@
                         <p>
                             The Margin is our uncensored, independent space for modern critique. Culture, fashion, film, society, the internet. Everything we cannot stop thinking about, written the way it actually deserves to be written. No brief to answer to. No algorithm to please. Just us, our contributors, and a genuine love for ideas that have something real to say.
                         </p>
-                        <p class="border-l-2 border-ink pl-5 py-1 my-6 italic text-ink bg-ink/[0.02]">
+                        <p class="border-l border-ink/20 pl-5 py-1 my-6 italic text-ink bg-ink/[0.01]">
                             If you have ever put down a magazine and thought, "that is not quite it," this is for you.
                         </p>
                         <p class="text-ink/40 pt-4 uppercase text-[10px] tracking-widest font-bold">
@@ -447,21 +466,21 @@
                             </p>
                         </div>
 
-                        <div class="border-t-2 md:border-t-0 md:border-l-2 border-ink pt-10 md:pt-0 md:pl-12">
+                        <div class="border-t md:border-t-0 md:border-l border-ink/10 pt-10 md:pt-0 md:pl-12">
                             <form onsubmit="alert('Thank you. Your submission has entered our space.'); event.preventDefault(); switchView('home');" class="flex flex-col gap-6">
                                 <div>
                                     <label class="text-[9px] uppercase tracking-widest text-ink font-bold block mb-1">Identity / Brand</label>
-                                    <input type="text" required class="w-full bg-transparent border-b-2 border-ink/20 py-2 text-xs outline-none focus:border-ink transition-colors duration-300 font-semibold">
+                                    <input type="text" required class="w-full bg-transparent border-b border-ink/20 py-2 text-xs outline-none focus:border-ink transition-colors duration-300 font-semibold">
                                 </div>
                                 <div>
                                     <label class="text-[9px] uppercase tracking-widest text-ink font-bold block mb-1">Email Coordinates</label>
-                                    <input type="email" required class="w-full bg-transparent border-b-2 border-ink/20 py-2 text-xs outline-none focus:border-ink transition-colors duration-300 font-semibold">
+                                    <input type="email" required class="w-full bg-transparent border-b border-ink/20 py-2 text-xs outline-none focus:border-ink transition-colors duration-300 font-semibold">
                                 </div>
                                 <div>
                                     <label class="text-[9px] uppercase tracking-widest text-ink font-bold block mb-1">The Proposition</label>
-                                    <textarea rows="4" required class="w-full bg-transparent border-b-2 border-ink/20 py-2 text-xs outline-none resize-none focus:border-ink transition-colors duration-300 font-semibold"></textarea>
+                                    <textarea rows="4" required class="w-full bg-transparent border-b border-ink/20 py-2 text-xs outline-none resize-none focus:border-ink transition-colors duration-300 font-semibold"></textarea>
                                 </div>
-                                <button type="submit" class="bg-ink text-canvas hover:bg-transparent hover:text-ink text-[11px] uppercase tracking-[0.3em] font-bold py-4 mt-4 border-2 border-ink transition-all duration-300">
+                                <button type="submit" class="bg-ink text-canvas hover:bg-transparent hover:text-ink text-[11px] uppercase tracking-[0.3em] font-bold py-4 mt-4 border border-ink transition-all duration-300">
                                     Send Transmission
                                 </button>
                             </form>
@@ -503,15 +522,15 @@
                         </div>
                         <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-canvas via-canvas/90 to-transparent pointer-events-none"></div>
                         
-                        <div class="w-full mt-10 p-6 md:p-12 border-2 border-ink bg-canvas relative flex flex-col items-center text-center">
+                        <div class="w-full mt-10 p-6 md:p-12 border border-ink/10 bg-canvas relative flex flex-col items-center text-center">
                             <h5 class="font-sans uppercase tracking-[0.3em] text-[10px] mb-3 text-ink/40 font-bold">The Editorial Circle</h5>
                             <p class="text-xs tracking-[0.15em] text-ink/70 mb-6 max-w-sm leading-relaxed font-semibold">
                                 The most vital concepts live just past the margin. Subscribe to unlock our entire uncensored index.
                             </p>
                             <form onsubmit="unlockArchive(event)" class="w-full max-w-md flex flex-col gap-4">
-                                <input type="text" placeholder="NAME" required class="w-full bg-transparent border-b-2 border-ink/20 px-2 py-2 text-[10px] uppercase tracking-widest outline-none focus:border-ink transition-colors duration-300 font-bold">
-                                <input type="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b-2 border-ink/20 px-2 py-2 text-[10px] uppercase tracking-widest outline-none focus:border-ink transition-colors duration-300 font-bold">
-                                <button type="submit" class="w-full bg-ink text-canvas hover:bg-transparent hover:text-ink text-[11px] uppercase tracking-[0.3em] font-bold py-4 mt-4 border-2 border-ink transition-all duration-300">
+                                <input type="text" placeholder="NAME" required class="w-full bg-transparent border-b border-ink/20 px-2 py-2 text-[10px] uppercase tracking-widest outline-none focus:border-ink transition-colors duration-300 font-bold">
+                                <input type="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-ink/20 px-2 py-2 text-[10px] uppercase tracking-widest outline-none focus:border-ink transition-colors duration-300 font-bold">
+                                <button type="submit" class="w-full bg-ink text-canvas hover:bg-transparent hover:text-ink text-[11px] uppercase tracking-[0.3em] font-bold py-4 mt-4 border border-ink transition-all duration-300">
                                     Access Feature
                                 </button>
                             </form>
@@ -524,7 +543,7 @@
                         ${article.content}
                     </div>
 
-                    <div class="mt-16 pt-8 border-t-2 border-ink flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="mt-16 pt-8 border-t border-ink/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <button onclick="handleLikeInteraction('${article.id}')" 
                                 id="like-btn" 
                                 class="w-full sm:w-auto flex items-center justify-center gap-2.5 text-[10px] uppercase tracking-[0.2em] px-5 py-3 border transition-all duration-300 group ${currentLikeData.liked ? 'border-ink text-ink bg-black/[0.04]' : 'border-ink/20 text-ink/60 hover:text-ink hover:border-ink'}" font-bold>
@@ -564,7 +583,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full h-[35vh] md:h-[68vh] overflow-hidden bg-ink/5 border border-ink mb-12 md:mb-20">
+                    <div class="w-full h-[35vh] md:h-[68vh] overflow-hidden bg-ink/5 border border-ink/10 mb-12 md:mb-20">
                         <img src="${article.cover_image}" alt="Media Frame" class="w-full h-full object-cover">
                     </div>
 
