@@ -44,6 +44,10 @@
         }
     </script>
     <style>
+        /* Smooth Native Scrolling Mechanics Across Device Portals */
+        html {
+            scroll-behavior: smooth;
+        }
         .fade-transition {
             transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -95,6 +99,20 @@
             -ms-overflow-style: none;  
             scrollbar-width: none;  
         }
+
+        /* Tactile Magnetic Carousel Physics */
+        .snap-carousel {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .snap-card {
+            scroll-snap-align: start;
+        }
+        @media (min-width: 640px) {
+            .snap-card {
+                scroll-snap-align: center;
+            }
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-ink selection:text-canvas dark:selection:bg-darkInk dark:selection:text-darkCanvas">
@@ -127,12 +145,10 @@
                 THE MARGIN
             </h1>
 
-            <!-- Your Core Tagline Placed Visibly -->
             <div class="text-[10px] md:text-[11px] uppercase tracking-[0.35em] font-bold text-center text-ink/50 dark:text-darkInk/50 mb-3 select-none">
                 Ideas that live outside the main
             </div>
             
-            <!-- Manifesto Editorial Subtitle Statement -->
             <div class="max-w-2xl mx-auto px-4 text-center mt-1">
                 <p class="font-cursive italic text-sm md:text-base text-ink/70 dark:text-darkInk/70 leading-relaxed">
                     A digital record exploring parameters across art, hidden culture, and internet paradigms.
@@ -283,13 +299,12 @@
                 return;
             }
 
-            // Slice out the 3 newest articles for the horizontal row
             const topTriptychArticles = filteredData.slice(0, 3);
             const remainingArticles = filteredData.slice(3);
 
             let htmlPayload = '';
 
-            // 1. HORIZONTAL CAROUSEL SHOWCASE (Fixed Image Height & Scale Bug)
+            // 1. HORIZONTAL CAROUSEL SHOWCASE (With Section Smooth Snapping Physics Added)
             htmlPayload += `
                 <section class="w-full mb-16 md:mb-20">
                     <div class="w-full flex items-center justify-between border-b border-ink/10 dark:border-darkInk/10 pb-3 mb-6">
@@ -297,19 +312,18 @@
                             Current Focus // Featured Essays
                         </h3>
                         <div class="hidden sm:flex items-center gap-2 text-[10px] tracking-wider text-ink/30 dark:text-darkInk/30 font-bold">
-                            SCROLL HORIZONTAL &rarr;
+                            SWIPE INSIDE ARCHIVE &rarr;
                         </div>
                     </div>
                     
-                    <!-- Horizontal Scroll Container -->
-                    <div class="w-full overflow-x-auto no-scrollbar flex gap-6 md:gap-8 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 snap-x snap-mandatory">
+                    <!-- Snap Physics Applied Here -->
+                    <div class="w-full overflow-x-auto no-scrollbar flex gap-6 md:gap-8 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 snap-carousel">
             `;
 
             topTriptychArticles.forEach((article, idx) => {
                 htmlPayload += `
-                    <div onclick="switchView('article', '${article.id}')" class="min-w-[80vw] sm:min-w-[38vw] lg:min-w-[28vw] max-w-[320px] lg:max-w-[360px] flex-shrink-0 snap-start cursor-pointer group flex flex-col justify-between">
+                    <div onclick="switchView('article', '${article.id}')" class="min-w-[85vw] sm:min-w-[38vw] lg:min-w-[28vw] max-w-[320px] lg:max-w-[360px] flex-shrink-0 snap-card cursor-pointer group flex flex-col justify-between">
                         <div class="space-y-3.5">
-                            <!-- Fixed Height Ratio Window Wrapper -->
                             <div class="relative w-full aspect-[16/10] overflow-hidden border border-ink/10 dark:border-darkInk/10 bg-ink/5 z-10">
                                 <img src="${article.cover_image}" alt="Feature Frame" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out">
                                 <div class="absolute top-2 left-2 bg-canvas/90 dark:bg-darkCanvas/90 text-ink dark:text-darkInk text-[8px] font-black tracking-widest px-2 py-0.5 uppercase">
@@ -336,80 +350,19 @@
                 </section>
             `;
 
-            // 2. CORE SUB-STREAM ARCHIVE GRID SYSTEM
+            // 2. STABILIZED SYSTEM: COMPACT SIDE PANEL + AUTOMATIC 3-COLUMN ADAPTIVE GRID
             htmlPayload += `
-                <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 md:gap-16 items-start">
+                <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 md:gap-10 xl:gap-16 items-start">
                     
-                    <!-- LEFT COLUMN: STREAM ARCHIVE -->
-                    <div class="lg:col-span-8">
-                        <div class="sticky top-0 mountaineer z-30 bg-canvas/90 dark:bg-darkCanvas/90 backdrop-blur-md border-b border-ink/10 dark:border-darkInk/10 py-4 mb-10 flex items-center justify-between">
+                    <!-- LEFT CONTAINER: Editorial Blocks -->
+                    <div class="lg:col-span-4 lg:sticky lg:top-6 space-y-8 mb-12 lg:mb-0">
+                        <div class="border-b border-ink/10 dark:border-darkInk/10 py-4 mb-4 flex items-center justify-between">
                             <h3 class="text-[11px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold">
-                                Index Records &bull; ${currentCategory.toUpperCase()}
+                                Identity & Focus
                             </h3>
-                            <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">VOL. 02 // 2026</span>
+                            <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">VOL. 02</span>
                         </div>
 
-                        <section class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
-            `;
-                
-            const articlesToShow = remainingArticles.slice(0, visibleArchiveCount);
-            
-            if(articlesToShow.length > 0) {
-                articlesToShow.forEach((article) => {
-                    htmlPayload += `
-                        <article class="flex flex-col cursor-pointer group justify-between h-full border-b border-ink/5 dark:border-darkInk/5 pb-6" onclick="switchView('article', '${article.id}')">
-                            <div class="space-y-3.5">
-                                <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">
-                                    <span>${article.category}</span>
-                                    <span>${article.date}</span>
-                                </div>
-                                <!-- Standardized Grid Aspect Ratio Frame -->
-                                <div class="w-full aspect-[16/10] overflow-hidden border border-ink/10 dark:border-darkInk/10 bg-ink/5 relative">
-                                    <img src="${article.cover_image}" alt="Archive Media" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out">
-                                </div>
-                                <h4 class="font-serif text-lg tracking-tight text-ink dark:text-darkInk font-bold group-hover:text-ink/60 dark:group-hover:text-darkInk/60 transition-colors duration-300">
-                                    ${article.title}
-                                </h4>
-                                <p class="text-xs text-ink/70 dark:text-darkInk/70 font-normal leading-relaxed line-clamp-2">${article.preview_snippet}</p>
-                            </div>
-                            <div class="pt-4">
-                                <span class="inline-block text-[10px] uppercase tracking-[0.25em] font-bold border-b border-ink dark:border-darkInk pb-0.5 group-hover:text-ink/40 dark:group-hover:text-darkInk/40 fade-transition">Read Essay &rarr;</span>
-                            </div>
-                        </article>
-                    `;
-                });
-            } else if (topTriptychArticles.length === 0) {
-                htmlPayload += `
-                    <div class="col-span-2 text-center py-12 text-xs uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">
-                        End of index records.
-                    </div>`;
-            } else {
-                htmlPayload += `
-                    <div class="col-span-2 text-left py-2 text-xs uppercase tracking-[0.2em] text-ink/30 dark:text-darkInk/30 font-bold">
-                        Additional archives mapped inside main categories.
-                    </div>`;
-            }
-            
-            htmlPayload += `
-                        </section>
-            `;
-
-            if (remainingArticles.length > visibleArchiveCount) {
-                htmlPayload += `
-                    <div class="w-full flex justify-center mt-10 mb-12">
-                        <button onclick="loadMoreArticles()" class="text-[11px] uppercase tracking-[0.3em] font-bold text-canvas dark:text-darkCanvas bg-ink dark:bg-darkInk hover:bg-transparent dark:hover:bg-transparent hover:text-ink dark:hover:text-darkInk px-8 py-3.5 border border-ink dark:border-darkInk transition-all duration-300">
-                            Load Archive Series
-                        </button>
-                    </div>
-                `;
-            }
-
-            htmlPayload += `
-                    </div>
-                    
-                    <!-- 3. RIGHT COLUMN: SIDE PANEL BLOCK -->
-                    <div class="lg:col-span-4 lg:border-l lg:border-ink/10 lg:pl-10 pt-12 lg:pt-0 space-y-12 sticky top-20">
-                        
                         <!-- Notebook Box Fragment -->
                         <div class="bg-ink/[0.01] border border-ink/10 dark:border-darkInk/10 p-6">
                             <h4 class="text-[10px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold mb-4 flex items-center gap-2">
@@ -439,7 +392,73 @@
                             </ul>
                         </div>
                     </div>
+                    
+                    <!-- RIGHT CONTAINER: UNLOCKED BROAD STREAM GRID -->
+                    <!-- Automatically turns from a 2-column layout into a gorgeous 3-column layout at 1280px screen size -->
+                    <div class="lg:col-span-8 lg:border-l lg:border-ink/10 lg:pl-10">
+                        <div class="border-b border-ink/10 dark:border-darkInk/10 py-4 mb-10 flex items-center justify-between hidden lg:flex">
+                            <h3 class="text-[11px] uppercase tracking-[0.3em] text-ink dark:text-darkInk font-bold">
+                                Index Records &bull; ${currentCategory.toUpperCase()}
+                            </h3>
+                            <span class="text-[10px] text-ink/40 dark:text-darkInk/40 tracking-wider font-bold">2026</span>
+                        </div>
 
+                        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12">
+            `;
+                
+            const articlesToShow = remainingArticles.slice(0, visibleArchiveCount);
+            
+            if(articlesToShow.length > 0) {
+                articlesToShow.forEach((article) => {
+                    htmlPayload += `
+                        <article class="flex flex-col cursor-pointer group justify-between h-full border-b border-ink/5 dark:border-darkInk/5 pb-6" onclick="switchView('article', '${article.id}')">
+                            <div class="space-y-3.5">
+                                <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">
+                                    <span>${article.category}</span>
+                                    <span>${article.date}</span>
+                                </div>
+                                <div class="w-full aspect-[16/10] overflow-hidden border border-ink/10 dark:border-darkInk/10 bg-ink/5 relative">
+                                    <img src="${article.cover_image}" alt="Archive Media" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out">
+                                </div>
+                                <h4 class="font-serif text-base tracking-tight text-ink dark:text-darkInk font-bold group-hover:text-ink/60 dark:group-hover:text-darkInk/60 transition-colors duration-300 line-clamp-2">
+                                    ${article.title}
+                                </h4>
+                                <p class="text-xs text-ink/70 dark:text-darkInk/70 font-normal leading-relaxed line-clamp-2">${article.preview_snippet}</p>
+                            </div>
+                            <div class="pt-4">
+                                <span class="inline-block text-[10px] uppercase tracking-[0.25em] font-bold border-b border-ink dark:border-darkInk pb-0.5 group-hover:text-ink/40 dark:group-hover:text-darkInk/40 fade-transition">Read Essay &rarr;</span>
+                            </div>
+                        </article>
+                    `;
+                });
+            } else if (topTriptychArticles.length === 0) {
+                htmlPayload += `
+                    <div class="col-span-full text-center py-12 text-xs uppercase tracking-widest text-ink/40 dark:text-darkInk/40 font-bold">
+                        End of index records.
+                    </div>`;
+            } else {
+                htmlPayload += `
+                    <div class="col-span-full text-left py-2 text-xs uppercase tracking-[0.2em] text-ink/30 dark:text-darkInk/30 font-bold">
+                        Additional archives mapped inside main categories.
+                    </div>`;
+            }
+            
+            htmlPayload += `
+                        </section>
+            `;
+
+            if (remainingArticles.length > visibleArchiveCount) {
+                htmlPayload += `
+                    <div class="w-full flex justify-center mt-12 mb-12">
+                        <button onclick="loadMoreArticles()" class="text-[11px] uppercase tracking-[0.3em] font-bold text-canvas dark:text-darkCanvas bg-ink dark:bg-darkInk hover:bg-transparent dark:hover:bg-transparent hover:text-ink dark:hover:text-darkInk px-8 py-3.5 border border-ink dark:border-darkInk transition-all duration-300">
+                            Load Archive Series
+                        </button>
+                    </div>
+                `;
+            }
+
+            htmlPayload += `
+                    </div>
                 </div>
             `;
 
@@ -551,7 +570,7 @@
             `;
         }
 
-        // VIEW D: IMMERSIVE READING CHAMBER (Standardized Main Image Frame)
+        // VIEW D: IMMERSIVE READING CHAMBER
         function renderArticle() {
             const article = MARGIN_DATABASE.find(item => item.id === activeArticleId);
             if(!article) return;
@@ -644,7 +663,6 @@
                         </div>
                     </div>
 
-                    <!-- Refined Main Article Image Container -->
                     <div class="w-full max-w-4xl aspect-[16/10] md:aspect-[21/9] overflow-hidden bg-ink/5 border border-ink/10 dark:border-darkInk/10 mb-10 md:mb-16">
                         <img src="${article.cover_image}" alt="Media Frame" class="w-full h-full object-cover">
                     </div>
